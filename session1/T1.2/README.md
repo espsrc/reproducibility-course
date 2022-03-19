@@ -67,3 +67,4 @@ Include a title and a short description and then click `Create pull request`:
 
 ![exercise example 1](./media/exercise2.4.png)
 
+Once this is done, you will have to wait for the original repository owner to review the request and accept it. When this happens you will be notified shortly :smile:.
