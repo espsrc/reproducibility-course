@@ -70,7 +70,7 @@ Let's commit a change to the README.md file:
 
 :one: In your repository's list of files, click README.md. 
 
-[practice example 1](./media/practice1.12.jpg) 
+[practice example 1](./media/practice1.12.png) 
 
 
 :two: Above the file's content, click on the icon of a pencil (to edit).
@@ -78,11 +78,11 @@ Let's commit a change to the README.md file:
 
 :three: On the Edit file tab, type some information about your respository. 
 
-[practice example 1](./media/practice1.13.jpg) 
+[practice example 1](./media/practice1.13.png) 
 
 
 :four: Above the new content, click Preview changes. 
-[practice example 1](./media/practice1.14.jpg) 
+[practice example 1](./media/practice1.14.png) 
 
 
 :five: At the bottom of the page, type a short, meaningful commit message that describes the change you made to the file. You can attribute the commit to more than one author in the commit message.
@@ -91,7 +91,7 @@ Let's commit a change to the README.md file:
 
 :seven: Commit the changes
 
-[practice example 1](./media/practice1.15.jpg) 
+[practice example 1](./media/practice1.15.png) 
 
 
 
@@ -100,7 +100,24 @@ Let's commit a change to the README.md file:
 
 ###  1.4. <a name='ForkingarepositoryandcreatingaPullRequests'></a>Forking a repository and creating a Pull Requests
 
+:bulb: A fork is a copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project.
 
+*Most commonly, forks are used to either propose changes to someone else's project or to use someone else's project as a starting point for your own idea.*
+
+Two options with Fork:
+
+- :construction_worker_woman: Propose changes to someone else's project. For example, you can use forks to propose changes related to fixing a bug or an improvement or new documentation, etc.
+- :fireworks: Use someone else's project as a starting point for your own idea. Open source software is based on the idea that by sharing code, we can make better, more reliable software. 
+
+:one: Go to our respository for the course: https://github.com/spsrc/reproducibility-course
+
+:two: In the top-right corner of the page, click Fork. 
+
+[practice example 1](./media/practice1.16.png) 
+
+:three: Once this is done, we have a copy of the original repository in our account, so we can work with this copy and make all the changes we need. This way you work in the same way as with your own repository, but with the advantage that you already have a starting point from which you can work on a new idea or propose improvements to the original repository.
+
+:bulb: *If we make some changes, for example to the README.md in this fork, we will see that a message appears indicating that our new "forked" repository is further ahead in "changes" (or commits) than the original, which means that we can either request a merge of our changes into the original via a Pull Request or compare both repositories.*
 
 
 ###  1.5. <a name='Addingdifferentbranchestoyourrepository'></a>Adding different branches to your repository
