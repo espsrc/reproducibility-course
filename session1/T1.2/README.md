@@ -10,6 +10,9 @@
 - To collaborate and to share with other members in a repository.
 - To learn about other features to improve the work with repositories.
 
+**Table of contents**
+<HR>
+
 <!-- vscode-markdown-toc -->
 * 1. [Session content](#Sessioncontent)
 	* 1.1. [Creating a new repository and configure the main options](#Creatinganewrepositoryandconfigurethemainoptions)
@@ -23,13 +26,15 @@
 	* 2.1. [Exercise 1: Create an initial repository for this session.](#Exercise1:Createaninitialrepositoryforthissession.)
 	* 2.2. [Exercise 2: Managing forks to collaborate.](#Exercise2:Managingforkstocollaborate.)
 	* 2.3. [Exercise 3: Managing branches](#Exercise3:Managingbranches)
-* 3. [Exercise 4: Collaborating with other repositories and users](#Exercise4:Collaboratingwithotherrepositoriesandusers)
+	* 2.4. [Exercise 4: Collaborating with other repositories and users](#Exercise4:Collaboratingwithotherrepositoriesandusers)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
 	autoSave=true
 	/vscode-markdown-toc-config -->
 <!-- /vscode-markdown-toc -->
+<HR>
+
 
 ##  1. <a name='Sessioncontent'></a>Session content
 
@@ -279,7 +284,7 @@ From here we can merge the changes made in the development branch with the main 
 
  Once this is done, check that the merged changes already appear in the main branch by default.
 
-##  3. <a name='Exercise4:Collaboratingwithotherrepositoriesandusers'></a>Exercise 4: Collaborating with other repositories and users
+###  2.4. <a name='Exercise4:Collaboratingwithotherrepositoriesandusers'></a>Exercise 4: Collaborating with other repositories and users
 
 For this exercise you need to use the following document where each of the repositories from exercise 1 are listed for each user. 
 
