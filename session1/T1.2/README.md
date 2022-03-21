@@ -58,11 +58,11 @@ We want yo create reate a repository named `XXXX` where you can store ideas, res
 
 - :four: Select Add a README file. Then we will change it. 
 
-![practice example 1](./media/practice1.8.png)
+![practice example 1](./media/practice1.9.png)
 
 - :five: Select whether your repository will be Public or Private. In or case we will select Public. 
 
-![practice example 1](./media/practice1.9.png)
+![practice example 1](./media/practice1.8.png)
 
 - :six: Click Create repository. 
 
