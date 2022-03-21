@@ -53,17 +53,55 @@ We want yo create reate a repository named `XXXX` where you can store ideas, res
 
 [practice example 1](./media/practice1.2.png) 
 
+That done, we now have our first repository ready to be used.
 
+We will see the initial screen of our repository and we will explain each section of it:
 
-
-
+[practice example 1](./media/practice1.11.jpg) 
 
 
 ###  1.2. <a name='Addingcontenttoourrepository'></a>Adding content to our repository
 
+A `commit` is like a snapshot of all the files in your project at a particular point in time.
+
+When we created your new repository, we initialized it with a `README.md` file. README files are a great place to describe your project in more detail, or add some documentation such as how to install or use your project. The contents of your README file are automatically shown on the front page of your repository for each folder you have it.
+
+Let's commit a change to the README.md file:
+
+:one: In your repository's list of files, click README.md. 
+
+[practice example 1](./media/practice1.12.jpg) 
+
+
+:two: Above the file's content, click on the icon of a pencil (to edit).
+
+
+:three: On the Edit file tab, type some information about your respository. 
+
+[practice example 1](./media/practice1.13.jpg) 
+
+
+:four: Above the new content, click Preview changes. 
+[practice example 1](./media/practice1.14.jpg) 
+
+
+:five: At the bottom of the page, type a short, meaningful commit message that describes the change you made to the file. You can attribute the commit to more than one author in the commit message.
+
+:six: Below the commit message fields, decide whether to add your commit to the current branch or to a new branch.
+
+:seven: Commit the changes
+
+[practice example 1](./media/practice1.15.jpg) 
+
+
+
+
 ###  1.3. <a name='Workingwiththeversionhistory'></a>Working with the version history
 
 ###  1.4. <a name='ForkingarepositoryandcreatingaPullRequests'></a>Forking a repository and creating a Pull Requests
+
+
+
 
 ###  1.5. <a name='Addingdifferentbranchestoyourrepository'></a>Adding different branches to your repository
 
