@@ -23,16 +23,17 @@
 	* 1.6. [Collaborating with other users and reposositories](#Collaboratingwithotherusersandreposositories)
 	* 1.7. [Other advanced features](#Otheradvancedfeatures)
 * 2. [Exercises](#Exercises)
-	* 2.1. [Exercise 1: Create an initial repository for this session.](#Exercise1:Createaninitialrepositoryforthissession.)
-	* 2.2. [Exercise 2: Managing forks to collaborate.](#Exercise2:Managingforkstocollaborate.)
-	* 2.3. [Exercise 3: Managing branches](#Exercise3:Managingbranches)
-	* 2.4. [Exercise 4: Collaborating with other repositories and users](#Exercise4:Collaboratingwithotherrepositoriesandusers)
+	* 2.1. [Exercise 1 Create an initial repository for this session.](#Exercise1Createaninitialrepositoryforthissession.)
+	* 2.2. [Exercise 2 Managing forks to collaborate.](#Exercise2Managingforkstocollaborate.)
+	* 2.3. [Exercise 3 Managing branches](#Exercise3Managingbranches)
+	* 2.4. [Exercise 4 Collaborating with other repositories and users](#Exercise4Collaboratingwithotherrepositoriesandusers)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
 	autoSave=true
 	/vscode-markdown-toc-config -->
 <!-- /vscode-markdown-toc -->
+
 <HR>
 
 
@@ -192,7 +193,7 @@ Now you have two branches, `main` and `readme-edits`. Right now, they look exact
 
 ##  2. <a name='Exercises'></a>Exercises
 
-###  2.1. <a name='Exercise1:Createaninitialrepositoryforthissession.'></a>Exercise 1: Create an initial repository for this session.
+###  2.1. <a name='Exercise1Createaninitialrepositoryforthissession.'></a>Exercise 1 Create an initial repository for this session.
 
 For this training exercise it will be necessary to create a new repository with the following initial configuration data
 
@@ -208,7 +209,7 @@ In the following image you can see the options to select for the creation of the
 
 
 
-###  2.2. <a name='Exercise2:Managingforkstocollaborate.'></a>Exercise 2: Managing forks to collaborate.
+###  2.2. <a name='Exercise2Managingforkstocollaborate.'></a>Exercise 2 Managing forks to collaborate.
 
 In this exercise we are going to use an existing repository to *Fork* and interact with it, and finally propose some changes to be merged with the original existing repository by using a *Pull Request*
 
@@ -250,7 +251,7 @@ Include a title and a short description and then click `Create pull request`:
 
 Once this is done, you will have to wait for the original repository owner to review the request and accept it. When this happens you will be notified shortly :smile:.
 
-###  2.3. <a name='Exercise3:Managingbranches'></a>Exercise 3: Managing branches
+###  2.3. <a name='Exercise3Managingbranches'></a>Exercise 3 Managing branches
 
 Branches allow you to develop features, fix bugs, or experiment with new ideas in a contained area of your repository isolated from the original repository.
 
@@ -284,7 +285,7 @@ From here we can merge the changes made in the development branch with the main 
 
  Once this is done, check that the merged changes already appear in the main branch by default.
 
-###  2.4. <a name='Exercise4:Collaboratingwithotherrepositoriesandusers'></a>Exercise 4: Collaborating with other repositories and users
+###  2.4. <a name='Exercise4Collaboratingwithotherrepositoriesandusers'></a>Exercise 4 Collaborating with other repositories and users
 
 For this exercise you need to use the following document where each of the repositories from exercise 1 are listed for each user. 
 
