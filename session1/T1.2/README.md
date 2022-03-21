@@ -44,20 +44,37 @@ Repositories can contain folders and files, images, videos, spreadsheets, and da
 
 We want yo create reate a repository named `XXXX` where you can store ideas, resources, or even share and discuss things with others. To do that:
 
-- :one: In the upper-right corner of any page, use the drop-down menu, and select **New repository**. ![practice example 1](./media/practice1.1.png)
-- :two: In the Repository name box, enter XXXX. [practice example 1](./media/practice1.6.png)
-- :three: In the Description box, write a short description. [practice example 1](./media/practice1.7.png)
-- :four: Select Add a README file. Then we will change it. [practice example 1](./media/practice1.8.png)
-- :five: Select whether your repository will be Public or Private. In or case we will select Public. [practice example 1](./media/practice1.9.png)
-- :six: Click Create repository. [practice example 1](./media/practice1.10.png)
+- :one: In the upper-right corner of any page, use the drop-down menu, and select **New repository**. 
 
-[practice example 1](./media/practice1.2.png) 
+![practice example 1](./media/practice1.1.png)
+
+- :two: In the Repository name box, enter XXXX. 
+
+![practice example 1](./media/practice1.6.png)
+
+- :three: In the Description box, write a short description. 
+
+![practice example 1](./media/practice1.7.png)
+
+- :four: Select Add a README file. Then we will change it. 
+
+![practice example 1](./media/practice1.8.png)
+
+- :five: Select whether your repository will be Public or Private. In or case we will select Public. 
+
+![practice example 1](./media/practice1.9.png)
+
+- :six: Click Create repository. 
+
+![practice example 1](./media/practice1.10.png)
+
+![practice example 1](./media/practice1.2.png) 
 
 That done, we now have our first repository ready to be used.
 
 We will see the initial screen of our repository and we will explain each section of it:
 
-[practice example 1](./media/practice1.11.jpg) 
+![practice example 1](./media/practice1.11.jpg) 
 
 
 ###  1.2. <a name='Addingcontenttoourrepository'></a>Adding content to our repository
@@ -70,7 +87,7 @@ Let's commit a change to the README.md file:
 
 :one: In your repository's list of files, click README.md. 
 
-[practice example 1](./media/practice1.12.png) 
+![practice example 1](./media/practice1.12.png) 
 
 
 :two: Above the file's content, click on the icon of a pencil (to edit).
@@ -78,11 +95,12 @@ Let's commit a change to the README.md file:
 
 :three: On the Edit file tab, type some information about your respository. 
 
-[practice example 1](./media/practice1.13.png) 
+![practice example 1](./media/practice1.13.png) 
 
 
 :four: Above the new content, click Preview changes. 
-[practice example 1](./media/practice1.14.png) 
+
+![practice example 1](./media/practice1.14.png) 
 
 
 :five: At the bottom of the page, type a short, meaningful commit message that describes the change you made to the file. You can attribute the commit to more than one author in the commit message.
@@ -91,7 +109,7 @@ Let's commit a change to the README.md file:
 
 :seven: Commit the changes
 
-[practice example 1](./media/practice1.15.png) 
+![practice example 1](./media/practice1.15.png) 
 
 
 
@@ -113,7 +131,7 @@ Two options with Fork:
 
 :two: In the top-right corner of the page, click Fork. 
 
-[practice example 1](./media/practice1.16.png) 
+![practice example 1](./media/practice1.16.png) 
 
 :three: Once this is done, we have a copy of the original repository in our account, so we can work with this copy and make all the changes we need. This way you work in the same way as with your own repository, but with the advantage that you already have a starting point from which you can work on a new idea or propose improvements to the original repository.
 
@@ -149,9 +167,15 @@ In GitHub, use branches for **keeping bug fixes** and **feature work** separate 
 **To create a new branch**
 
 
-- :one: Click the Code tab of your XXXXX repository. [practice example 1](./media/practice1.4.png) 
+- :one: Click the Code tab of your XXXXX repository. 
+
+![practice example 1](./media/practice1.4.png) 
+
 - :two: Click the drop down at the top of the file list that says main. Branch menu
-- :three: Type a branch name, readme-edits, into the text box.[practice example 1](./media/practice1.5.png) 
+- :three: Type a branch name, readme-edits, into the text box.
+
+![practice example 1](./media/practice1.5.png) 
+
 - :four: Click Create branch: readme-edits from main.
 
 Now you have two branches, `main` and `readme-edits`. Right now, they look exactly the same. Next you'll add changes to the new branch.
