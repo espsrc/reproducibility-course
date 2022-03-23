@@ -69,8 +69,8 @@ main/master branch - this is the branch you want the world to see and use. It sh
 
 There are two ways to work with git repositories: 
 
-- Start an empty repository and add files for version control
-- Work with an available repository
+- :one: Start an empty repository and add files for version control
+- :two: Work with an available repository
 
 So you have a new codebase or a document that you have just started working on and decided to start using Git to keep track of all the changes you make. As we have already mentioned, it is easy to start using Git and you need only a single command to start a repository for your project (yes, it's really that easy). Go to your project's directory and run:
 
@@ -87,27 +87,126 @@ Cloning into...
 ...
 ```
 
-For example, to clone an  Git repository using Git of course and hosted on GitHub, you should run
+For example, to clone an  Git repository using `git` command and hosted on GitHub, you should run: 
 
+*:bulb: Go to your repository website and copy the code of the URL of it by clicking the button `Code`*
 ```
-$ git clone https://github.com/manuparra/biometrics.git
-Cloning into 'biometrics'...
+$ git clone https://github.com/<your_user_name>/reproducibidad-csic.git
+Cloning into 'reproducibidad-csic'...
 ...
 ```
 
-This command downloads the repository and automatically places it inside a git folder (and it initializes your repository to use with `git`).
+This command downloads the repository and automatically places it inside a git folder (and it initializes your repository to use with `git`). 
+
+:bulb: In the following steps we will interact with the repository through the `git` command.
 
 ### Adding content and modifiying a git repository
 
+To add content you will need to have a text editing tool (vi, vim, gedit, sublime text, textmate, bloc de notas, ...).
+
+First we are going to create a file with the name `functions.py` where we will add the following text:
+
+```
+def datatext():
+    print ("...")
+```
+
+Once this is done we save the file inside the folder of the previous repository that we have cloned and we go back to the terminal window, where we will use `git`. 
+
+Now let's check what changes we have pending, to do this use `git`:
+
+```
+git status
+```
+
+Here you will see the new file we have added.
+
+```
+...
+```
+
+Now open the text editor again and select the `README.md` file of the repository we have cloned, and add the following text at the end of it:
+
+Now we consult again from the terminal screen the status of the repository:
+
+```
+...
+```
+
+We can see that two changes appear:
+1.- The new addition of the previous file created (`functions.py`)
+2.- A modification of `README.md`.
+
+After this we can fix the changes by adding the files or directories we want to be part of this commit. 
+
+```
+git add README.md
+git add functions.py
+```
+
+And finally we create the commit of this group of files. 
+This change is however not permanently added to the repository history yet! To do that, we have to explicitly *commit* the changes:
+
+```
+git commit -m "Updated function file and README"
+```
+
+:bulb: *The commit message is a short description of the changes that have been made to the repository since the last commit. In our case, we have added a single, very short file, so an equally short commit message "Added a hello.txt file" will suffice. However, if you are working on a larger project, possibly with multiple other developers and researchers, you will want to make your commit messages as informative as possible, to make sure everyone can understand the changes made to the files without the need to dig through the source code unnecessarily. Even if you are working on your own, you will forget all the details after some time. It is always a good practice to include a short title for a commit and then underneath it to write a short paragraph detailing all the changes made in this commit.*
+
+Type the following to see the status again:
+
+```
+git status
+```
+
+*Here you can see that we have a new status with our commited files. They are ready to be pushed to our cloud repository in GitHub.*
+
+Once this is done we can upload the changes to the GitHub repository, because if we don't do this the changes will only live on your computer and not in the cloud (the GitHub service). To do this:
+
+```
+git push
+```
+
+Once this is done, the changes will be uploaded to GitHub and we can check that this is the case by accessing our repository website.
+
 ### Tracking changes 
 
+What if we wanted to review the changelog we have made to our repository so far? Git has powerful tools for checking the version and version history of our files, so it's very easy to keep track of everything we've done during the development of our work.
+
+:bulb: *Remember that in the previous trainiing session, we saw how you can check your repository versions visually.*
+
+To start playing with the `git` logs, we use:
+
+```
+git log
+```
+
+The output of this command is very rich :smile: :
+
+![practice example 19](./media/practice2.1.png) 
+
+In this screen you can see the `author`, `date` and `commit message`.
+
+If you hold ENTER or use the cursor to scroll down in the output text, you can scroll through the entire Git history, though it can take some time. git log may seem like a simple command, all it does at the end of the day is display your commit messages. However, it is extremely powerful and comes with a lot of options. Therefore, it is important that you familiarise yourself with the most common options or the ones that you think will be most useful in your day-to-day work.
+
+TBC.
+
 ### Basic workflow with ´git´
+
+TBC.
+
+![practice example 19](./media/practice2.2.jpg) 
+
 
 ### Working with branches
 
 ### Collaborating with other repositories
 
 ## Exercises
+
+
+
+
 
 
 
