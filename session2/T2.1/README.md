@@ -8,7 +8,27 @@
 - Track changes to code using git.
 - Interact and collaborate with other repositories using git.
 
-## Content
+<HR>
+<!-- vscode-markdown-toc -->
+* 1. [Content](#Content)
+	* 1.1. [Terminology and operations](#Terminologyandoperations)
+	* 1.2. [Creating and using a existing repository](#Creatingandusingaexistingrepository)
+	* 1.3. [Adding content and modifiying a git repository](#Addingcontentandmodifiyingagitrepository)
+	* 1.4. [Tracking changes](#Trackingchanges)
+	* 1.5. [Basic workflow with ´git´](#Basicworkflowwithgit)
+	* 1.6. [Working with branches](#Workingwithbranches)
+	* 1.7. [Collaborating with other repositories](#Collaboratingwithotherrepositories)
+* 2. [Exercises](#Exercises)
+
+<!-- vscode-markdown-toc-config
+	numbering=true
+	autoSave=true
+	/vscode-markdown-toc-config -->
+<!-- /vscode-markdown-toc -->
+<HR>
+
+
+##  1. <a name='Content'></a>Content
 
 ### Introduction to `git`
 
@@ -43,7 +63,7 @@ Git is one of many version control systems available.
 - works both locally and remotely
 
 
-### Terminology and operations
+###  1.1. <a name='Terminologyandoperations'></a>Terminology and operations
 
 These are the 4 basic concepts you need to know to use `git`.
 
@@ -65,7 +85,7 @@ branch - most of the time, code development is not linear: you change some thing
 
 main/master branch - this is the branch you want the world to see and use. It should only include files that you are confident other people will be able to use and use them without major issues. It should contain production-ready and working code only - if you need to add and test a new feature, create a separate branch for it.
 
-### Creating and using a existing repository
+###  1.2. <a name='Creatingandusingaexistingrepository'></a>Creating and using a existing repository
 
 There are two ways to work with git repositories: 
 
@@ -100,7 +120,7 @@ This command downloads the repository and automatically places it inside a git f
 
 :bulb: In the following steps we will interact with the repository through the `git` command.
 
-### Adding content and modifiying a git repository
+###  1.3. <a name='Addingcontentandmodifiyingagitrepository'></a>Adding content and modifiying a git repository
 
 To add content you will need to have a text editing tool (vi, vim, gedit, sublime text, textmate, bloc de notas, ...).
 
@@ -169,7 +189,7 @@ git push
 
 Once this is done, the changes will be uploaded to GitHub and we can check that this is the case by accessing our repository website.
 
-### Tracking changes 
+###  1.4. <a name='Trackingchanges'></a>Tracking changes 
 
 What if we wanted to review the changelog we have made to our repository so far? Git has powerful tools for checking the version and version history of our files, so it's very easy to keep track of everything we've done during the development of our work.
 
@@ -191,18 +211,18 @@ If you hold ENTER or use the cursor to scroll down in the output text, you can s
 
 TBC.
 
-### Basic workflow with ´git´
+###  1.5. <a name='Basicworkflowwithgit'></a>Basic workflow with ´git´
 
 TBC.
 
 ![practice example 19](./media/practice2.2.jpg) 
 
 
-### Working with branches
+###  1.6. <a name='Workingwithbranches'></a>Working with branches
 
-### Collaborating with other repositories
+###  1.7. <a name='Collaboratingwithotherrepositories'></a>Collaborating with other repositories
 
-## Exercises
+##  2. <a name='Exercises'></a>Exercises
 
 
 
