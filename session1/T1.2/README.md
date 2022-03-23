@@ -82,6 +82,9 @@ We will see the initial screen of our repository and we will explain each sectio
 
 ![practice example 1](./media/practice1.11.jpg) 
 
+:bulb: **Add the URL of your repository to this shared document to continue the practice and do the exercises.** [Copy here your repository's URL](https://docs.google.com/spreadsheets/d/1cX0e_HNXudTtAwX9rFyrjJAgQy5rF3Kz24T7oB3yZqo/edit?usp=sharing)
+
+
 
 ###  1.2. <a name='Addingcontenttoourrepository'></a>Adding content to our repository
 
@@ -118,9 +121,28 @@ Let's commit a change to the README.md file:
 ![practice example 1](./media/practice1.15.png) 
 
 
-
-
 ###  1.3. <a name='Workingwiththeversionhistory'></a>Working with the version history
+
+Now it's time to make some more changes by adding a folder and inside that folder include a file with this content. Copy and paste the content into the file you want to edit and add it to the repository.
+
+By doing this, we already have several changes fixed in the repository, so we can check the history of changes we have made. 
+
+To do so, access the history from this option:
+
+![practice example 1](./media/practice1.16.png) 
+
+And we will see a list of changes we've made:
+
+![practice example 1](./media/practice1.17.png) 
+
+In this list we can review what changes we have made during the lifetime of the repository and compare the changes with respect to a certain date.
+
+![practice example 1](./media/practice1.18.png) 
+
+:one: Copy the ID of the commit.
+:two: View and check differences and changes/deletions made in the repository and files.
+:three: See the status of the repository at this point.
+
 
 ###  1.4. <a name='ForkingarepositoryandcreatingaPullRequests'></a>Forking a repository and creating a Pull Requests
 
