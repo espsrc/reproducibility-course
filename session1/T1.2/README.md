@@ -211,6 +211,8 @@ Now you have two branches, `main` and `readme-edits`. Right now, they look exact
 
 ###  1.6. <a name='Collaboratingwithotherusersandreposositories'></a>Collaborating with other users and reposositories
 
+TBA.
+
 ###  1.7. <a name='Otheradvancedfeatures'></a>Other advanced features 
 
 ##  2. <a name='Exercises'></a>Exercises
