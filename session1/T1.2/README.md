@@ -21,7 +21,6 @@
 	* 1.4. [Forking a repository and creating a Pull Requests](#ForkingarepositoryandcreatingaPullRequests)
 	* 1.5. [Adding different branches to your repository](#Addingdifferentbranchestoyourrepository)
 	* 1.6. [Collaborating with other users and reposositories](#Collaboratingwithotherusersandreposositories)
-	* 1.7. [Other advanced features](#Otheradvancedfeatures)
 * 2. [Exercises](#Exercises)
 	* 2.1. [Exercise 1 Create an initial repository for this session.](#Exercise1Createaninitialrepositoryforthissession.)
 	* 2.2. [Exercise 2 Managing forks to collaborate.](#Exercise2Managingforkstocollaborate.)
@@ -450,6 +449,10 @@ For this exercise you need to use GitHub's search function to find repositories.
 ```
 reproducibility-csic-with-git
 ```
+
+bulb: Search all of GitHub
+	
+![exercise example 4](./media/exercise4.5.png)
 
 All the repositories of this course will appear (yours included).
 
