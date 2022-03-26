@@ -343,8 +343,8 @@ To communicate responsibility, you can assign the issue to a member of your orga
 
 For this training exercise it will be necessary to create a new repository with the following initial configuration data
 
-- Repository name: ``reproducibility-with-git``.
-- Repository description: ``Repository for the execise 1.``.
+- Repository name: ``reproducibility-csic-with-git``.
+- Repository description: ``Repository for the exercise 1.``.
 - Repository scope: ``Public``.
 - Licence: For example select the ``MIT licence``.
 - Add a default ``README.md``.
@@ -353,6 +353,14 @@ In the following image you can see the options to select for the creation of the
 
  ![exercise example 1](./media/exercise1.1.png)
 
+Add some information to the repository in the README.md file, use the following:
+
+```
+## Reproducibility course at CSIC with Git.
+
+This is the working repository for the course exercises.
+In this repository other students of the course will collaborate to complete the content.	
+```
 
 ###  2.2. <a name='Exercise2Managingforkstocollaborate.'></a>Exercise 2 Managing forks to collaborate.
 
