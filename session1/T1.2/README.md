@@ -36,6 +36,24 @@
 
 <HR>
 
+**Pre-requisites:**
+
+You need to create or have a GitHub account:
+- To create a GitHub account for the first time, follow the steps below.
+
+:1: Go to your browser and open [GitHub](https://github.com/).
+:2: Click top left on `Sign up`.
+![SignUp](media/practice1.1.pre.png)
+:3: Then select your GitHub `email`,  `password` and the `username`.
+![SignUp](media/practice1.2.pre.png)
+:4: Verify you account by solving a "Puzzle".
+![SignUp](media/practice1.3.pre.png)
+:5: That's all. You have your new GitHub account.
+:6: :rocket: You can now continue with the course.
+
+<HR>
+
+
 
 ##  1. <a name='Sessioncontent'></a>Session content
 
@@ -43,12 +61,13 @@
 
 GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
 
-:warning: *To complete this tutosessionrial, [you need a GitHub account](http://github.com/) and Internet access. You don't need to know how to code, use the command line, or install Git (the version control software that GitHub is built on). If you have a question about any of the expressions used in this session, head on over to the [glossary](https://docs.github.com/en/get-started/quickstart/github-glossary) to find out more about our terminology.*
+:warning: *To complete this session, [you need a GitHub account](http://github.com/) and Internet access. You don't need to know how to code, use the command line, or install Git (the version control software that GitHub is built on). If you have a question about any of the expressions used in this session, head on over to the **[glossary](https://docs.github.com/en/get-started/quickstart/github-glossary)** to find out more about our terminology.*
 
-A repository is usually used to organize a single project. 
-Repositories can contain folders and files, images, videos, spreadsheets, and data sets -- anything your project needs. Often, repositories include a `README` file, a file with information about your project. `README` files are written in the plain text [Markdown language](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax). You can use this cheat sheet to get started with Markdown syntax. GitHub lets you add a `README` file at the same time you create your new repository. GitHub also offers other common options such as a *license file*.
+:fire: A repository is usually used to organize a single project. 
 
-We want yo create reate a repository named `XXXX` where you can store ideas, resources, or even share and discuss things with others. To do that:
+:exclamation: Repositories can contain folders and files, images, videos, spreadsheets, and data sets -- anything your project needs. Often, repositories include a `README` file, a file with information about your project. `README` files are written in the plain text [Markdown language](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax). You can use this cheat sheet to get started with Markdown syntax. GitHub lets you add a `README` file at the same time you create your new repository. GitHub also offers other common options such as a *license file*.
+
+We want to create a repository named `XXXX` where you can store ideas, resources, or even share and discuss things with others. To do that:
 
 - :one: In the upper-right corner of any page, use the drop-down menu, and select **New repository**. 
 
@@ -82,19 +101,16 @@ We will see the initial screen of our repository and we will explain each sectio
 
 ![practice example 1](./media/practice1.11.jpg) 
 
-:bulb: **Add the URL of your repository to this shared document to continue the practice and do the exercises.** [Copy here your repository's URL](https://docs.google.com/spreadsheets/d/1cX0e_HNXudTtAwX9rFyrjJAgQy5rF3Kz24T7oB3yZqo/edit?usp=sharing)
-
-
 
 ###  1.2. <a name='Addingcontenttoourrepository'></a>Adding content to our repository
 
 A `commit` is like a snapshot of all the files in your project at a particular point in time.
 
-When we created your new repository, we initialized it with a `README.md` file. README files are a great place to describe your project in more detail, or add some documentation such as how to install or use your project. The contents of your README file are automatically shown on the front page of your repository for each folder you have it.
+When we created your new repository, we initialized it with a `README.md` file. `README` files are a great place to describe your project in more detail, or add some documentation such as how to install or use your project. The contents of your `README`  file are automatically shown on the front page of your repository for each folder you have it.
 
-Let's commit a change to the README.md file:
+Let's commit a change to the `README.md` file:
 
-:one: In your repository's list of files, click README.md. 
+:one: In your repository's list of files, click `README.md`. 
 
 ![practice example 1](./media/practice1.12.png) 
 
@@ -106,8 +122,32 @@ Let's commit a change to the README.md file:
 
 ![practice example 1](./media/practice1.13.png) 
 
+For example, add the following text a
 
-:four: Above the new content, click Preview changes. 
+```
+## Aim of this repository
+This is my first repository to store information from my research on XXXX.
+
+## How to collaborate:
+
+- One: Clone this repository.
+- Two: Add your features and collaborate with us on this research project.
+
+## How to cite this repository
+
+	@misc{YouName2022,
+  		author = {Your Name},
+  		title = {My first repository},
+  		year = {2022},
+  		publisher = {GitHub},
+  		journal = {GitHub repository},
+  		howpublished = {\url{URL_OF_THIS_REPO}}
+		}
+
+```
+
+
+:four: Above the new content, click `Preview changes`. 
 
 ![practice example 1](./media/practice1.14.png) 
 
@@ -116,7 +156,7 @@ Let's commit a change to the README.md file:
 
 :six: Below the commit message fields, decide whether to add your commit to the current branch or to a new branch.
 
-:seven: Commit the changes
+:seven: Commit the changes.
 
 ![practice example 1](./media/practice1.15.png) 
 
@@ -124,6 +164,18 @@ Let's commit a change to the README.md file:
 ###  1.3. <a name='Workingwiththeversionhistory'></a>Working with the version history
 
 Now it's time to make some more changes by adding a folder and inside that folder include a file with this content. Copy and paste the content into the file you want to edit and add it to the repository.
+
+Add this new file in this path: `/funtions/plot.py`:
+
+```
+import matplotlib.pyplot as plt
+fig = plt.figure()
+ax = fig.add_axes([0,0,1,1])
+langs = ['C', 'C++', 'Java', 'Python', 'PHP']
+students = [23,17,35,29,12]
+ax.bar(langs,students)
+plt.show()
+```
 
 By doing this, we already have several changes fixed in the repository, so we can check the history of changes we have made. 
 
@@ -144,7 +196,7 @@ In this list we can review what changes we have made during the lifetime of the 
 :three: See the status of the repository at this point.
 
 
-###  1.4. <a name='ForkingarepositoryandcreatingaPullRequests'></a>Forking a repository and creating a Pull Requests
+###  1.4. <a name='ForkingarepositoryandcreatingaPullRequests'></a>Forking a repository and creating a Pull Request
 
 :bulb: A fork is a copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project.
 
@@ -157,7 +209,7 @@ Two options with Fork:
 
 :one: Go to our respository for the course: https://github.com/spsrc/reproducibility-course
 
-:two: In the top-right corner of the page, click Fork. 
+:two: In the top-right corner of the page, click `Fork`. 
 
 ![practice example 1](./media/practice1.16.png) 
 
@@ -172,15 +224,15 @@ Branching lets you have different versions of a repository at one time.
 
 By default, your repository has one branch named main that is considered to be the definitive branch. You can create additional branches off of main in your repository. You can use branches to have different versions of a project at one time. This is helpful when you want to add new features to a project without changing the main source of code. The work done on different branches will not show up on the main branch until you merge it, which we will cover later in this guide. You can use branches to experiment and make edits before committing them to main.
 
-When you create a branch off the main branch, you're making a copy, or snapshot, of main as it was at that point in time. If someone else made changes to the main branch while you were working on your branch, you could pull in those updates.
+When you create a branch off the main branch, *you're making a copy*, or *snapshot*, of main as it was at that point in time. If someone else made changes to the main branch while you were working on your branch, you could pull in those updates.
+
+![practice example 1](./media/practice1.3.png) 
 
 This diagram shows:
 
 - The main branch
 - A new branch called feature
 - The journey that feature takes before it's merged into main
-
-[practice example 1](./media/practice1.3.png) 
 
 Have you saved different versions of a file? Something like:
 
@@ -194,19 +246,30 @@ In GitHub, use branches for **keeping bug fixes** and **feature work** separate 
 
 **To create a new branch**
 
-
 - :one: Click the Code tab of your XXXXX repository. 
 
 ![practice example 1](./media/practice1.4.png) 
 
-- :two: Click the drop down at the top of the file list that says main. Branch menu
-- :three: Type a branch name, readme-edits, into the text box.
+- :two: Click the drop down at the top of the file list that says `Master` Branch menu.
+- :three: Type a branch name, with the name `readme-collaborators`, into the text box to `create` a new branch.
 
 ![practice example 1](./media/practice1.5.png) 
 
-- :four: Click Create branch: readme-edits from main.
+- :four: Click Create branch: `readme-collaborators` from main.
 
-Now you have two branches, `main` and `readme-edits`. Right now, they look exactly the same. Next you'll add changes to the new branch.
+Now you have two branches, `main` and `readme-collaborators`. Right now, they look exactly the same. 
+
+We will now make changes to the Branch we have just made `readme-collaborators`. To do this, once selected, edit the `README.md` file and add the following text before the references section:
+
+
+```
+## Contributors
+
+- Manuel Parra-Royón (use here you name)
+
+```
+
+
 
 
 ###  1.6. <a name='Collaboratingwithotherusersandreposositories'></a>Collaborating with other users and reposositories
