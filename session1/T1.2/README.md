@@ -41,15 +41,15 @@
 You need to create or have a GitHub account:
 - To create a GitHub account for the first time, follow the steps below.
 
-:1: Go to your browser and open [GitHub](https://github.com/).
-:2: Click top left on `Sign up`.
+:one: Go to your browser and open [GitHub](https://github.com/).
+:two: Click top left on `Sign up`.
 ![SignUp](media/practice1.1.pre.png)
-:3: Then select your GitHub `email`,  `password` and the `username`.
+:three: Then select your GitHub `email`,  `password` and the `username`.
 ![SignUp](media/practice1.2.pre.png)
-:4: Verify you account by solving a "Puzzle".
+:four: Verify you account by solving a "Puzzle".
 ![SignUp](media/practice1.3.pre.png)
-:5: That's all. You have your new GitHub account.
-:6: :rocket: You can now continue with the course.
+:five: That's all. You have your new GitHub account.
+:six: :rocket: You can now continue with the course.
 
 <HR>
 
@@ -269,8 +269,21 @@ We will now make changes to the Branch we have just made `readme-collaborators`.
 
 ```
 
+Once the change has been made, we can merge the branch we just changed with the master branch so that we have those changes reflected.
 
+To do this you can go to the main repository page and you will be prompted to merge these changes with the master branch by clicking "Compare and Pull Request"
+	
+![p1.20](./media/practice1.20.png)
 
+Then you will see the screen to Check the merge and create a pull request.
+
+![p1.21](./media/practice1.21.png)
+	
+After that you have to merge it
+	
+![p1.22](./media/practice1.22.png)
+	
+Now, your main branch is updated with the content of the `readme-collaborators`.
 
 ###  1.6. <a name='Collaboratingwithotherusersandreposositories'></a>Collaborating with other users and reposositories
 
