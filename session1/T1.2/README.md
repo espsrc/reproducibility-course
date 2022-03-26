@@ -336,7 +336,6 @@ You can add a milestone to track the issue as part of a date based target. A mil
 
 To communicate responsibility, you can assign the issue to a member of your organization.	
 	
-###  1.7. <a name='Otheradvancedfeatures'></a>Other advanced features 
 
 ##  2. <a name='Exercises'></a>Exercises
 
@@ -353,7 +352,6 @@ For this training exercise it will be necessary to create a new repository with 
 In the following image you can see the options to select for the creation of the repository:
 
  ![exercise example 1](./media/exercise1.1.png)
-
 
 
 ###  2.2. <a name='Exercise2Managingforkstocollaborate.'></a>Exercise 2 Managing forks to collaborate.
