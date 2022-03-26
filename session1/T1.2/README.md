@@ -287,8 +287,55 @@ Now, your main branch is updated with the content of the `readme-collaborators`.
 
 ###  1.6. <a name='Collaboratingwithotherusersandreposositories'></a>Collaborating with other users and reposositories
 
-TBA.
+![p1.23](./media/practice1.23.png)
 
+
+Issues allow you to track your work on GitHub. When you mention an issue in another issue or pull request, the issue timeline reflects the cross-reference so you can track related work. To indicate that work is in progress, you can link an issue to a pull request. When the pull request is merged, the linked issue is automatically closed.
+
+**Track work**
+
+You can organize and prioritize issues with projects. To track issues as part of a larger issue, you can use task lists. To categorize related issues, you can use labels and milestones.
+
+**Efficient communication**
+
+You can @mention collaborators who have access to your repository in an issue to draw their attention to a comment. To link related issues in the same repository, you can type # followed by part of the issue title and then clicking the issue that you want to link. To communicate responsibility, you can assign issues.
+
+**Opening a blank issue**
+
+First, create an issue. There are multiple ways to create an issue; you can choose the most convenient method for your workflow. This example will use the GitHub UI. For more information about other ways to create an issue, see "Creating an issue."
+
+:one: On GitHub, navigate to the main page of the repository.
+
+:two: Under your repository name, click Issues. Issues tab
+
+:three: Click New issue. 
+
+:four: In this example, we will start with a blank issue. Your repository may use issue templates and issue forms to encourage contributors to provide specific information. If your repository uses issue templates, click Open a blank issue.
+	
+**Filling in information**
+
+Give your issue a descriptive title. The title should convey at a glance what the issue is about.
+
+Add a description that explains the purpose of the issue, including any details that might help resolve the issue. For example, if this is a bug report, describe the steps to reproduce the bug, the expected result, and the actual result.
+
+You can use markdown to add formatting, links, emojis, and more. For more information, see [Markdown language](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+	
+**Adding a task list**
+
+It can be helpful to break large issues into smaller tasks, or to track multiple related issues in a single larger issue. 
+	
+**Adding labels**
+
+Add a label to categorize your issue. For example, you might use a bug label and a good first issue label to indicate that an issue is a bug that a first-time contributor could pick up. 	
+	
+**Adding milestones**
+
+You can add a milestone to track the issue as part of a date based target. A milestone will show the progress of the issue.
+	
+**Assigning the issue**
+
+To communicate responsibility, you can assign the issue to a member of your organization.	
+	
 ###  1.7. <a name='Otheradvancedfeatures'></a>Other advanced features 
 
 ##  2. <a name='Exercises'></a>Exercises
