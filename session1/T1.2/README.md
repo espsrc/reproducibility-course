@@ -445,16 +445,33 @@ Once this is done, check that the merged changes already appear in the main bran
 
 ###  2.4. <a name='Exercise4Collaboratingwithotherrepositoriesandusers'></a>Exercise 4 Collaborating with other repositories and users
 
-For this exercise you need to use the following document where each of the repositories from exercise 1 are listed for each user. 
+For this exercise you need to use GitHub's search function to find repositories. Search for the following repository:
 
-- Select a user from the list and access their repository.
-- Once on the website of the selected repository, go to the `Issues` option and `Add` to the user an action or correction to do on their repository, for example:
+```
+reproducibility-csic-with-git
+```
 
-![exercise example 4](./media/exercise4.1.png)
+All the repositories of this course will appear (yours included).
 
-> Hi, I have reviewed your repository on reproducibility and I think you should add in the Readme.md file a link to another version control platform: GitLab. Here is the link https://gitlab.com. 
+From that list of repositories you have to select two repositories: 
 
+- :one: the repository just above and,
+- two: the one just below it.
 
-![exercise example 4.2](./media/exercise4.2.png)
+**For the first :one: repository** you have to make a fork of this repository and add: **directory** with your name and a **file** inside called `plot.py` containing the following:
 
-:bulb: *Use the @ to type the name of the repository owner for more direct notification. For example: @manuparra*.
+```
+import matplotlib.pyplot as plt
+plt.plot([1, 2, 3, 4])
+plt.ylabel('some numbers')
+plt.show()	
+```
+Once this is done you must Create a Pull Request with this change to the original repository.
+	
+**For the second :two: repository** you are asked to create at least one issue to the repository, to make one of the following changes, which the repository owner must do:
+- a) Request to include a file with a science image.
+- b) Request to include a data file.
+- c) Request to add more information to README.md related to the aims.
+- d) Report a typo for correction 
+
+:bulb: *Use the @ to type the name of the repository owner for direct notification. For example: @manuparra*.
