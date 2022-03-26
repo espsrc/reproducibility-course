@@ -409,13 +409,15 @@ Once this is done, you will have to wait for the original repository owner to re
 
 Branches allow you to develop features, fix bugs, or experiment with new ideas in a contained area of your repository isolated from the original repository.
 
-In this exercise, two branches will be created, one for development and one for testing. Let's say that the development branch will be the one that will include the new features and the test branch will be exclusively for testing new things.
+In this exercise, two branches will be created, one for `development` and one for `testing`. Let's say that the development branch will be the one that will include the new features and the test branch will be exclusively for testing new things.
 
-We go back to our repository created in exercise 1. From there we create two branches. To do this, create a new branch from the next option on the main screen of your repository and name it "development". 
+We go back to you repository created in exercise 1 (remember you named it: `reproducibility-csic-with-git`). From there we've to create two branches. 
+	
+To do this, create a new branch from the next option on the main screen of your repository and name it **"development"**. 
 
 ![exercise example 3](./media/exercise3.1.png)
 
-Again we do the same and create another new branch called "test". 
+Again, we do the same and create another new branch called **"test"**. 
 
 ![exercise example 3](./media/exercise3.2.png)
 
@@ -423,10 +425,12 @@ You will see that when you select this icon, all the available branches will app
 
 ![exercise example 3](./media/exercise3.3.png)
 
-Now we are going to switch to the development branch and modify the README.md file, adding the following lines to the end of it:
+Now we are going to switch to the development branch and modify the `README.md` file, adding the following lines to the end of it:
 
-> \# Session 1: Exercises.
-> \- Created a new branch for development.
+```
+# Session 1: Exercises.
+- Created a new branch for development.
+```
 
 Once this is done, we are going to merge the changes from the development branch with the main branch. To do this, click on view branches and then on view all branches:
 
@@ -437,7 +441,7 @@ From here we can merge the changes made in the development branch with the main 
 
 ![exercise example 3](./media/exercise3.5.png)
 
- Once this is done, check that the merged changes already appear in the main branch by default.
+Once this is done, check that the merged changes already appear in the main branch by default.
 
 ###  2.4. <a name='Exercise4Collaboratingwithotherrepositoriesandusers'></a>Exercise 4 Collaborating with other repositories and users
 
