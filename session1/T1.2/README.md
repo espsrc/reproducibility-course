@@ -368,9 +368,7 @@ In this exercise we are going to use an existing repository to *Fork* and intera
 
 To do this, we first go to the existing repository we want to *Fork*:
 
-To do this, we first go to the existing repository we want to fork:
-
-https://github.com/manuparra/reprod-csic-exercise2
+https://github.com/manuparra/reproducibiity-csic-git
 
 Then, from the top right menu click the "Fork" button and you will see a screen to select which organisation (of which you are a member) will do this operation, select one of them and in a few moments the repository will be a fork of the original one. If you are not a member of an organisation, it will directly Fork the repository.
 
@@ -378,18 +376,21 @@ You should see something like this, where the name of the repository is indicate
 
  ![exercise example 1](./media/exercise2.1.png)
 
-
+In this moment you are working with a "Forked" copy of the original repository.
+	
 Now you have to make the following change:
 
-- Use the `Add` option to include a folder with your name and inside that folder a `Readme.md` file with the following text:
+- Use the `Add` option to include a FOLDER with your name and inside that folder a `README.md` file with the following text:
 
-> \# Course of Reproduciblity @CSIC
-> In this course I will learn:
-> Control version platforms, containers and more !.
+```
+# Course of Reproduciblity @CSIC
+In this course I will learn:
+Control version platforms like GitHub, containers and more!
+```
 
-`Commit` the change and add a short description of this change like `Updated folder and readme.md`.
+`Commit` the change and add a short description of this change with the following text: `Updated folder and README.md`.
 
-Now it is time to contribute the changes made by making a Pull Requests, i.e. requesting the original repository that we "would like" to include these changes in the original repository. To do this go to the main repository screen and select the following option:
+Now it is time to contribute the changes made by making a Pull Request, i.e. requesting the original repository that we "would like" to include these changes in the original repository. To do this go to the main repository screen and select the following option:
 
  ![exercise example 1](./media/exercise2.2.png)
 
