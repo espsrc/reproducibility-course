@@ -9,6 +9,7 @@
 - Interact and collaborate with other repositories using git.
 
 <HR>
+
 <!-- vscode-markdown-toc -->
 * 1. [Content](#Content)
 	* 1.1. [Terminology and operations](#Terminologyandoperations)
@@ -19,12 +20,16 @@
 	* 1.6. [Working with branches](#Workingwithbranches)
 	* 1.7. [Collaborating with other repositories](#Collaboratingwithotherrepositories)
 * 2. [Exercises](#Exercises)
+	* 2.1. [Creating a new repository and adding content](#Creatinganewrepositoryandaddingcontent)
+	* 2.2. [Forking a repository to collaborate with it](#Forkingarepositorytocollaboratewithit)
+	* 2.3. [Working with branches](#Workingwithbranches-1)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
 	autoSave=true
 	/vscode-markdown-toc-config -->
 <!-- /vscode-markdown-toc -->
+
 <HR>
 
 
@@ -223,6 +228,12 @@ TBC.
 ###  1.7. <a name='Collaboratingwithotherrepositories'></a>Collaborating with other repositories
 
 ##  2. <a name='Exercises'></a>Exercises
+
+###  2.1. <a name='Creatinganewrepositoryandaddingcontent'></a>Creating a new repository and adding content
+
+###  2.2. <a name='Forkingarepositorytocollaboratewithit'></a>Forking a repository to collaborate with it
+
+###  2.3. <a name='Workingwithbranches-1'></a>Working with branches
 
 
 
