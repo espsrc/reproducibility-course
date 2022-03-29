@@ -45,7 +45,7 @@ You need to create or have a GitHub account:
 ![SignUp](media/practice1.1.pre.png)
 :three: Then select your GitHub `email`,  `password` and the `username`.
 ![SignUp](media/practice1.2.pre.png)
-:four: Verify you account by solving a "Puzzle".
+:four: Verify you account by solving a `"Puzzle"`.
 ![SignUp](media/practice1.3.pre.png)
 :five: That's all. You have your new GitHub account.
 :six: :rocket: You can now continue with the course.
@@ -338,12 +338,22 @@ To communicate responsibility, you can assign the issue to a member of your orga
 
 ##  2. <a name='Exercises'></a>Exercises
 
-###  2.1. <a name='Exercise1Createaninitialrepositoryforthissession.'></a>Exercise 1 Create an initial repository for this session.
+###  2.1. <a name='Exercise1Createaninitialrepositoryforthissession.'></a>Exercise 1 - Create an initial repository for this session.
 
-For this training exercise it will be necessary to create a new repository with the following initial configuration data
+:pill: **Aim of this exercise**
+In this exercise a new repository will be created and some modifications and data files will be added. Finally, the history of changes made will be reviewed.
 
-- Repository name: ``reproducibility-csic-with-git``.
-- Repository description: ``Repository for the exercise 1.``.
+<HR>
+
+For this training exercise it will be necessary to create a new repository with the following initial details: 
+
+:warning: Use the first letter of your first name and your first surname for the name of the repository + `-reproducibility-csic-github`. 
+> :radioactive: :bulb: For example: If your name is `Manuel Parra`, your repository name will be:
+> `mparra-reproducibility-csic-github`
+
+
+- Repository name: ``<namesurname>-reproducibility-csic-github``.
+- Repository description: ``Repository for the exercise 1``.
 - Repository scope: ``Public``.
 - Licence: For example select the ``MIT licence``.
 - Add a default ``README.md``.
@@ -352,49 +362,99 @@ In the following image you can see the options to select for the creation of the
 
  ![exercise example 1](./media/exercise1.1.png)
 
-Add some information to the repository in the README.md file, use the following:
+Add some information to your repository by modyfing the `README.md` file. Use the following text to update the `README.md` file.
 
 ```
-## Reproducibility course at CSIC with Git.
+## Reproducibility course at CSIC with GitHub platform.
 
 This is the working repository for the course exercises.
-In this repository other students of the course will collaborate to complete the content.	
+In this repository other students of the course will 
+collaborate to complete the content.
+
+# Session 1
+
+## Creating a new repository and adding content
+
+- [x] Created repository
+- [x] Updated content
+
+```
+:arrow_right: Commit the change
+
+After including this change, create a folder with the name `data` and add the following data file named `power.csv`, copying and pasting the following content:
+
+```
+date,max,avg,min
+2021-10-05 15:00,5285.0,4126.0,3968.0
+2021-10-05 15:15,5292.0,4125.0,3953.0
+2021-10-05 15:30,5296.0,4125.0,3950.0
 ```
 
-###  2.2. <a name='Exercise2Managingforkstocollaborate.'></a>Exercise 2 Managing forks to collaborate.
+:arrow_right: Commit the change
 
-In this exercise we are going to use an existing repository to *Fork* and interact with it, and finally propose some changes to be merged with the original existing repository by using a *Pull Request*
+Once this change is made, add a couple more lines of data to the `power.csv` file:
 
-To do this, we first go to the existing repository we want to *Fork*:
+```
+2021-10-05 15:45,5287.0,4123.0,3952.0
+2021-10-05 16:00,5234.0,4122.0,3965.0
+```
 
-https://github.com/manuparra/reproducibiity-csic-git
+:arrow_right: Commit the change
 
-Then, from the top right menu click the "Fork" button and you will see a screen to select which organisation (of which you are a member) will do this operation, select one of them and in a few moments the repository will be a fork of the original one. If you are not a member of an organisation, it will directly Fork the repository.
+:checkered_flag: :checkered_flag: After these steps, you can check the version history. 
+> Could you go back to a previous version of the data table?
 
-You should see something like this, where the name of the repository is indicated and below it the original repository of the "Fork":
+
+###  2.2. <a name='Exercise2Managingforkstocollaborate.'></a>Exercise 2 -  Managing forks to collaborate.
+
+:pill: **Aim of this exercise**
+In this exercise we are going to use an existing repository to :fork_and_knife: *Fork* and interact with it, and finally propose some changes to be merged with the original existing repository by using a *Pull Request*. 
+*The idea is to collaborate with an existing repository to propose some changes to the content.*
+
+<HR>
+
+To do this, we first go to this repository by clicking this link: 
+
+https://github.com/manuparra/mparra-reproducibility-github
+
+Then, from the top right menu click the :fork_and_knife: *Fork* button and you will see a screen to select which organisation (of which you are a member) will do this operation, select one of them and in a few moments the repository will be a fork of the original one. If you are not a member of an organisation, it will directly :fork_and_knife: *Fork* the repository.
+
+After that, you should see something like this, where the name of the repository is indicated and below it the original repository of the :fork_and_knife: *Fork*:
 
  ![exercise example 1](./media/exercise2.1.png)
 
-In this moment you are working with a "Forked" copy of the original repository.
+In this moment you are working with a :fork_and_knife: *Forked* copy of the original repository.
 	
 Now you have to make the following change:
 
 - Use the `Add` option to include a FOLDER with your name and inside that folder a `README.md` file with the following text:
 
+
+:warning: In order to create this `FOLDER`, use the first letter of your first name and your first surname. 
+> :radioactive: :bulb: For example: If your name is `Manuel Parra`, your FOLDER and FILE path will be:
+> `mparra/README.md`
+> :warning: Use a path to create the file.
+
+Paste the following text to the 
+
 ```
 # Course of Reproduciblity @CSIC
+
 In this course I will learn:
-Control version platforms like GitHub, containers and more!
+- Control version platforms like GitHub, containers and more!
+
 ```
 
-`Commit` the change and add a short description of this change with the following text: `Updated folder and README.md`.
+:arrow_right: `Commit` the change and add a short description of this change with the following text: `Updated folder and README.md`.
 
-Now it is time to contribute the changes made by making a Pull Request, i.e. requesting the original repository that we "would like" to include these changes in the original repository. To do this go to the main repository screen and select the following option:
+Now it is time to contribute the changes made by making a *Pull Request*, i.e. requesting the original repository that we *"would like"* to include these changes in the original repository. 
+
+To do this go to the main repository screen and select the following option:
 
  ![exercise example 1](./media/exercise2.2.png)
 
 
-Doing this checks that there are no conflicts and you can propose the change by including a comment about the changes you want to bring to the original repository. 
+Doing this, it checks that there are no conflicts and you can propose the change by including a comment about the changes you want to push to the original repository. 
 
 ![exercise example 1](./media/exercise2.3.png)
 
@@ -402,45 +462,54 @@ Include a title and a short description and then click `Create pull request`:
 
 ![exercise example 1](./media/exercise2.4.png)
 
-Once this is done, you will have to wait for the original repository owner to review the request and accept it. When this happens you will be notified shortly :smile:.
+Once this is done, you will have to wait for the original repository owner to review the request and accept it. When this happens you will be notified in a short time :smile: .
 
-###  2.3. <a name='Exercise3Managingbranches'></a>Exercise 3 Managing branches
+###  2.3. <a name='Exercise3Managingbranches'></a>Exercise 3 - Managing branches
 
+:pill: **Aim of this exercise**
 Branches allow you to develop features, fix bugs, or experiment with new ideas in a contained area of your repository isolated from the original repository.
+*The idea is to create one branche, add content and update the original repository with the changes.*
 
-In this exercise, two branches will be created, one for `development` and one for `testing`. Let's say that the development branch will be the one that will include the new features and the test branch will be exclusively for testing new things.
+<HR>
 
-We go back to you repository created in exercise 1 (remember you named it: `reproducibility-csic-with-git`). From there we've to create two branches. 
-	
-To do this, create a new branch from the next option on the main screen of your repository and name it **"development"**. 
+In this exercise, one branch will be created. Let's say that this new branch will include new features we want to implement or improve to the existing repository.
+
+For this exercise you have to go to the repository *"Forked"* in the previous exercise. 
+
+Once in the *Forked* repository we have to add a new branch.
+
+To do this, create a new branch from the next option on the main screen of your repository and name it **"<namesurname>-development"**. 
 
 ![exercise example 3](./media/exercise3.1.png)
 
-Again, we do the same and create another new branch called **"test"**. 
-
-![exercise example 3](./media/exercise3.2.png)
 
 You will see that when you select this icon, all the available branches will appear and you can switch between them to make changes in each one.
 
 ![exercise example 3](./media/exercise3.3.png)
 
-Now we are going to switch to the development branch and modify the `README.md` file, adding the following lines to the end of it:
+Now we are going to switch to the **"<namesurname>-development"** branch and modify the `README.md` file, adding the following lines to the end of it:
 
 ```
-# Session 1: Exercises.
+# Session 1: Exercises 3 from <namesurname>
 - Created a new branch for development.
 ```
 
-Once this is done, we are going to merge the changes from the development branch with the main branch. To do this, click on view branches and then on view all branches:
+:warning: In order to add this text, within the `<namesurname>` string, use the first letter of your first name and your first surname. 
+> :radioactive: :bulb: For example: If your name is `Manuel Parra`, your text will be:
+> ```
+># Session 1: Exercises 3 from mparra
+>Created a new branch for development.
+
+Once this is done, we are going to merge the changes from the **"<namesurname>-development"** branch with the main branch. To do this, click on `view branches` and then on `view all branches`:
 
 ![exercise example 3](./media/exercise3.4.png)
-
 
 From here we can merge the changes made in the development branch with the main branch. Click on the `New pull request` button to do this. 
 
 ![exercise example 3](./media/exercise3.5.png)
 
-Once this is done, check that the merged changes already appear in the main branch by default.
+Soon your changes will be accepted by the repository owner.
+
 
 ###  2.4. <a name='Exercise4Collaboratingwithotherrepositoriesandusers'></a>Exercise 4 Collaborating with other repositories and users
 
