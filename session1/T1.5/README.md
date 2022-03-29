@@ -1,4 +1,4 @@
-# Repository management and collaborative science platforms. GitHub and Gitlab.
+# Repository management and collaborative science platforms:  GitHub
 
 *Objectives of this session:*
 
