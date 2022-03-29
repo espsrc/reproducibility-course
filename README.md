@@ -8,7 +8,7 @@ Material for the practical course on reproducibility of scientific analysis (pla
 
 :beginner: L1.1 - [Introduction to the course and platform](#) :pill: **Javier Moldón**
 
-:beginner: L1.2 - [Importance of Open Science and reproducibility](#) :pill: **Susana Exósito**
+:beginner: L1.2 - [Importance of Open Science and reproducibility](#) :pill: **Susana Expósito**
 
 :beginner: L1.3 - [Intro Github](#) :pill: **Javier Moldón**
 
