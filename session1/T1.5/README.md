@@ -18,14 +18,14 @@
 	* 1.1. [Creating a new repository and configure the main options](#Creatinganewrepositoryandconfigurethemainoptions)
 	* 1.2. [Adding content to our repository](#Addingcontenttoourrepository)
 	* 1.3. [Working with the version history](#Workingwiththeversionhistory)
-	* 1.4. [Forking a repository and creating a Pull Requests](#ForkingarepositoryandcreatingaPullRequests)
+	* 1.4. [Forking a repository and creating a Pull Request](#ForkingarepositoryandcreatingaPullRequest)
 	* 1.5. [Adding different branches to your repository](#Addingdifferentbranchestoyourrepository)
 	* 1.6. [Collaborating with other users and reposositories](#Collaboratingwithotherusersandreposositories)
 * 2. [Exercises](#Exercises)
-	* 2.1. [Exercise 1 Create an initial repository for this session.](#Exercise1Createaninitialrepositoryforthissession.)
-	* 2.2. [Exercise 2 Managing forks to collaborate.](#Exercise2Managingforkstocollaborate.)
-	* 2.3. [Exercise 3 Managing branches](#Exercise3Managingbranches)
-	* 2.4. [Exercise 4 Collaborating with other repositories and users](#Exercise4Collaboratingwithotherrepositoriesandusers)
+	* 2.1. [Exercise 1 - Create an initial repository for this session](#Exercise1-Createaninitialrepositoryforthissession)
+	* 2.2. [Exercise 2 -  Managing forks to collaborate](#Exercise2-Managingforkstocollaborate)
+	* 2.3. [Exercise 3 - Managing branches](#Exercise3-Managingbranches)
+	* 2.4. [Exercise 4 - Collaborating with other repositories and users - Homework](#Exercise4-Collaboratingwithotherrepositoriesandusers-Homework)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -195,7 +195,7 @@ In this list we can review what changes we have made during the lifetime of the 
 :three: See the status of the repository at this point.
 
 
-###  1.4. <a name='ForkingarepositoryandcreatingaPullRequests'></a>Forking a repository and creating a Pull Request
+###  1.4. <a name='ForkingarepositoryandcreatingaPullRequest'></a>Forking a repository and creating a Pull Request
 
 :bulb: A fork is a copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project.
 
@@ -338,7 +338,7 @@ To communicate responsibility, you can assign the issue to a member of your orga
 
 ##  2. <a name='Exercises'></a>Exercises
 
-###  2.1. <a name='Exercise1Createaninitialrepositoryforthissession.'></a>Exercise 1 - Create an initial repository for this session
+###  2.1. <a name='Exercise1-Createaninitialrepositoryforthissession'></a>Exercise 1 - Create an initial repository for this session
 
 :pill: **Aim of this exercise**
 In this exercise a new repository will be created and some modifications and data files will be added. Finally, the history of changes made will be reviewed.
@@ -405,7 +405,7 @@ Once this change is made, add a couple more lines of data to the `power.csv` fil
 > Could you go back to a previous version of the data table?
 
 
-###  2.2. <a name='Exercise2Managingforkstocollaborate.'></a>Exercise 2 -  Managing forks to collaborate
+###  2.2. <a name='Exercise2-Managingforkstocollaborate'></a>Exercise 2 -  Managing forks to collaborate
 
 :pill: **Aim of this exercise**
 In this exercise we are going to use an existing repository to :fork_and_knife: *Fork* and interact with it, and finally propose some changes to be merged with the original existing repository by using a *Pull Request*. 
@@ -464,11 +464,11 @@ Include a title and a short description and then click `Create pull request`:
 
 Once this is done, you will have to wait for the original repository owner to review the request and accept it. When this happens you will be notified in a short time :smile: .
 
-###  2.3. <a name='Exercise3Managingbranches'></a>Exercise 3 - Managing branches
+###  2.3. <a name='Exercise3-Managingbranches'></a>Exercise 3 - Managing branches
 
 :pill: **Aim of this exercise**
 Branches allow you to develop features, fix bugs, or experiment with new ideas in a contained area of your repository isolated from the original repository.
-*The idea is to create one branche, add content and update the original repository with the changes.*
+*The idea is to create one branch, add content and update the original repository with the changes.*
 
 <HR>
 
@@ -478,7 +478,7 @@ For this exercise you have to go to the repository *"Forked"* in the previous ex
 
 Once in the *Forked* repository we have to add a new branch.
 
-To do this, create a new branch from the next option on the main screen of your repository and name it **"<namesurname>-development"**. 
+To do this, create a new branch from the next option on the main screen of your repository and name it **"<<namesurname>>-development"**. 
 
 ![exercise example 3](./media/exercise3.1.png)
 
@@ -511,31 +511,24 @@ From here we can merge the changes made in the development branch with the main 
 Soon your changes will be accepted by the repository owner.
 
 
-###  2.4. <a name='Exercise4Collaboratingwithotherrepositoriesandusers'></a>Exercise 4 Collaborating with other repositories and users
+###  2.4. <a name='Exercise4-Collaboratingwithotherrepositoriesandusers-Homework'></a>Exercise 4 - Collaborating with other repositories and users - Homework
 
 :pill: **Aim of this exercise**
-The aim of this exercise is for the student to be able to interact with the repository by collaborating with other users through the management of Issues and working with copies of repositories among the students.
+The aim of this exercise is for the student to be able to interact with the repository by collaborating with other users through the management of `Issues` and working with copies of repositories among the students.
 
 <HR>
 
-For this exercise you need to use GitHub's search function to find repositories. Search for the following repository:
+For this exercise you need to use the list of users and repositories listed in [this link](https://hackmd.io/s/B1zp3lJm5). On this page, go to exercise 4 and find your name and the tasks you have to perform with each of these repositories.
 
-```
-reproducibility-csic-with-git
-```
+The tasks to perform for this exercise are as follows:
 
-bulb: Search all of GitHub
-	
-![exercise example 4](./media/exercise4.5.png)
+- :one: Find your name in the list on this [link](https://hackmd.io/s/B1zp3lJm5).
+- :two: Two tasks will appear, 
+  - a) Make a fork of the repository listed below your name and then, 
+  - b) Create an Issue on the second repository.
 
-All the repositories of this course will appear (yours included).
 
-From that list of repositories you have to select two repositories: 
-
-- :one: the repository just above and,
-- two: the one just below it.
-
-**For the first :one: repository** you have to make a fork of this repository and add: **directory** with your name and a **file** inside called `plot.py` containing the following:
+**For the first :one: repository** you have to make a fork of this repository and add a **directory** with your `namesurname` and a **file** inside named `plot.py` containing the following:
 
 ```
 import matplotlib.pyplot as plt
@@ -543,9 +536,9 @@ plt.plot([1, 2, 3, 4])
 plt.ylabel('some numbers')
 plt.show()	
 ```
-Once this is done you must Create a Pull Request with this change to the original repository.
+Once this is done you must `Create a Pull Request` with this change to the original repository.
 	
-**For the second :two: repository** you are asked to create at least one issue to the repository, to make one of the following changes, which the repository owner must do:
+**For the second :two: repository** you have to create at least one issue to the repository, to make one of the following changes, which the **repository owner** must do:
 - a) Request to include a file with a science image.
 - b) Request to include a data file.
 - c) Request to add more information to README.md related to the aims.
