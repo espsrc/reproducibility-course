@@ -338,7 +338,7 @@ To communicate responsibility, you can assign the issue to a member of your orga
 
 ##  2. <a name='Exercises'></a>Exercises
 
-###  2.1. <a name='Exercise1Createaninitialrepositoryforthissession.'></a>Exercise 1 - Create an initial repository for this session.
+###  2.1. <a name='Exercise1Createaninitialrepositoryforthissession.'></a>Exercise 1 - Create an initial repository for this session
 
 :pill: **Aim of this exercise**
 In this exercise a new repository will be created and some modifications and data files will be added. Finally, the history of changes made will be reviewed.
@@ -405,7 +405,7 @@ Once this change is made, add a couple more lines of data to the `power.csv` fil
 > Could you go back to a previous version of the data table?
 
 
-###  2.2. <a name='Exercise2Managingforkstocollaborate.'></a>Exercise 2 -  Managing forks to collaborate.
+###  2.2. <a name='Exercise2Managingforkstocollaborate.'></a>Exercise 2 -  Managing forks to collaborate
 
 :pill: **Aim of this exercise**
 In this exercise we are going to use an existing repository to :fork_and_knife: *Fork* and interact with it, and finally propose some changes to be merged with the original existing repository by using a *Pull Request*. 
@@ -512,6 +512,11 @@ Soon your changes will be accepted by the repository owner.
 
 
 ###  2.4. <a name='Exercise4Collaboratingwithotherrepositoriesandusers'></a>Exercise 4 Collaborating with other repositories and users
+
+:pill: **Aim of this exercise**
+The aim of this exercise is for the student to be able to interact with the repository by collaborating with other users through the management of Issues and working with copies of repositories among the students.
+
+<HR>
 
 For this exercise you need to use GitHub's search function to find repositories. Search for the following repository:
 
