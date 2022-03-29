@@ -347,12 +347,12 @@ In this exercise a new repository will be created and some modifications and dat
 
 For this training exercise it will be necessary to create a new repository with the following initial details: 
 
-:warning: Use the first letter of your first name and your first surname for the name of the repository + `-reproducibility-csic-github`. 
+:warning: Use the first letter of your first name and your first surname for the name of the repository + `-csic-github`. 
 > :radioactive: :bulb: For example: If your name is `Manuel Parra`, your repository name will be:
-> `mparra-reproducibility-csic-github`
+> `mparra-csic-github`
 
 
-- Repository name: ``<namesurname>-reproducibility-csic-github``.
+- Repository name: ``<namesurname>-csic-github``.
 - Repository description: ``Repository for the exercise 1``.
 - Repository scope: ``Public``.
 - Licence: For example select the ``MIT licence``.
@@ -415,7 +415,7 @@ In this exercise we are going to use an existing repository to :fork_and_knife: 
 
 To do this, we first go to this repository by clicking this link: 
 
-https://github.com/manuparra/mparra-reproducibility-github
+https://github.com/manuparra/mparra-csic-github
 
 Then, from the top right menu click the :fork_and_knife: *Fork* button and you will see a screen to select which organisation (of which you are a member) will do this operation, select one of them and in a few moments the repository will be a fork of the original one. If you are not a member of an organisation, it will directly :fork_and_knife: *Fork* the repository.
 
@@ -427,7 +427,7 @@ In this moment you are working with a :fork_and_knife: *Forked* copy of the orig
 	
 Now you have to make the following change:
 
-- Use the `Add` option to include a FOLDER with your name and inside that folder a `README.md` file with the following text:
+- Use the `Add` option to include a `FOLDER` with your name and inside that folder a `README.md` file with the following text:
 
 
 :warning: In order to create this `FOLDER`, use the first letter of your first name and your first surname. 
@@ -445,7 +445,7 @@ In this course I will learn:
 
 ```
 
-:arrow_right: `Commit` the change and add a short description of this change with the following text: `Updated folder and README.md`.
+:arrow_right: `Commit` the change and add a short description of this change with the following text: `Updated folder and README.md`
 
 Now it is time to contribute the changes made by making a *Pull Request*, i.e. requesting the original repository that we *"would like"* to include these changes in the original repository. 
 
@@ -478,7 +478,7 @@ For this exercise you have to go to the repository *"Forked"* in the previous ex
 
 Once in the *Forked* repository we have to add a new branch.
 
-To do this, create a new branch from the next option on the main screen of your repository and name it **"<<namesurname>>-development"**. 
+To do this, create a new branch from the next option on the main screen of your repository and name it **"\<namesurname\>-development"**. 
 
 ![exercise example 3](./media/exercise3.1.png)
 
@@ -487,7 +487,7 @@ You will see that when you select this icon, all the available branches will app
 
 ![exercise example 3](./media/exercise3.3.png)
 
-Now we are going to switch to the **"<namesurname>-development"** branch and modify the `README.md` file, adding the following lines to the end of it:
+Now we are going to switch to the **"\<namesurname\>-development"** branch and to modify the `README.md` file, adding the following lines to the end of it:
 
 ```
 # Session 1: Exercises 3 from <namesurname>
@@ -500,15 +500,13 @@ Now we are going to switch to the **"<namesurname>-development"** branch and mod
 ># Session 1: Exercises 3 from mparra
 >Created a new branch for development.
 
-Once this is done, we are going to merge the changes from the **"<namesurname>-development"** branch with the main branch. To do this, click on `view branches` and then on `view all branches`:
+Once this is done, we are going to merge the changes from the **"\<namesurname\>-development"** branch with the main branch. To do this, click on `view branches` and then on `view all branches`:
 
 ![exercise example 3](./media/exercise3.4.png)
 
-From here we can merge the changes made in the development branch with the main branch. Click on the `New pull request` button to do this. 
+From here we can merge the changes made in the development branch with the main branch and original repository. Click on the `New pull request` button to do this. 
 
-![exercise example 3](./media/exercise3.5.png)
-
-Soon your changes will be accepted by the repository owner.
+🏁 🏁 Soon your changes will be accepted by the repository owner.
 
 
 ###  2.4. <a name='Exercise4-Collaboratingwithotherrepositoriesandusers-Homework'></a>Exercise 4 - Collaborating with other repositories and users - Homework
