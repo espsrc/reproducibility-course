@@ -8,7 +8,7 @@ Material for the practical course on reproducibility of scientific analysis (pla
 
 :beginner: L1.1 - Introduction to the course and platform :pill: **Javier Moldón**
 
-:beginner: L1.2 - Importance of Open Science and reproducibility :pill: **Susana Expósito**
+:beginner: L1.2 - [Importance of Open Science and reproducibility](session1/L2.1_Intro_Ciencia_Abierta/OpenScience_Intro_CursoCSIC_Mar2022.pdf) :pill: **Susana Expósito**
 
 :beginner: L1.3 - [Intro Github](session1/T1.3_introduction_github/curso_CSIC_S1_T1.3_intro_github.pdf) :pill: **Javier Moldón**
 
