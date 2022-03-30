@@ -516,14 +516,14 @@ The aim of this exercise is for the student to be able to interact with the repo
 
 <HR>
 
-For this exercise you need to use the list of users and repositories listed in [this link](https://hackmd.io/s/B1zp3lJm5). On this page, go to exercise 4 and find your name and the tasks you have to perform with each of these repositories.
+For this exercise you need to use the list of users and repositories listed in [this link](https://hackmd.io/z8JveJAvQTeiBsh0KnSg0Q?both#Homework---Exercise-4). On this page, find your name [here](https://hackmd.io/z8JveJAvQTeiBsh0KnSg0Q?both#Table-of-users-and-tasks-to-do-for-this-exercise), and the tasks you have to perform with each of these repositories.
 
 The tasks to perform for this exercise are as follows:
 
 - :one: Find your name in the list on this [link](https://hackmd.io/s/B1zp3lJm5).
 - :two: Two tasks will appear, 
   - a) Make a fork of the repository listed below your name and then, 
-  - b) Create an Issue on the second repository.
+  - b) Create almost two Issues on the second repository.
 
 
 **For the first :one: repository** you have to make a fork of this repository and add a **directory** with your `namesurname` and a **file** inside named `plot.py` containing the following:
