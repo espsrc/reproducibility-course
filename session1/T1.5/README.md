@@ -523,7 +523,7 @@ The tasks to perform for this exercise are as follows:
 - :one: Find your name in the list on this [link](https://hackmd.io/s/B1zp3lJm5).
 - :two: Two tasks will appear, 
   - a) Make a fork of the repository listed below your name and then, 
-  - b) Create almost two Issues on the second repository.
+  - b) Create at least two Issues on the second repository.
 
 
 **For the first :one: repository** you have to make a fork of this repository and add a **directory** with your `namesurname` and a **file** inside named `plot.py` containing the following:
