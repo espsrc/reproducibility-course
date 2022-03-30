@@ -536,7 +536,7 @@ plt.show()
 ```
 Once this is done you must `Create a Pull Request` with this change to the original repository.
 	
-**For the second :two: repository** you have to create at least one issue to the repository, to make one of the following changes, which the **repository owner** must do:
+**For the second :two: repository** you have to create at least two issues to make one of the following changes, which the **repository owner** must resolve:
 - a) Request to include a file with a science image.
 - b) Request to include a data file.
 - c) Request to add more information to README.md related to the aims.
