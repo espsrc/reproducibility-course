@@ -16,9 +16,8 @@
 	* 1.2. [Creating and using a existing repository](#Creatingandusingaexistingrepository)
 	* 1.3. [Adding content and modifiying a git repository](#Addingcontentandmodifiyingagitrepository)
 	* 1.4. [Tracking changes](#Trackingchanges)
-	* 1.5. [Basic workflow with ´git´](#Basicworkflowwithgit)
+	* 1.5. [Forking, cloning and colaborating with a repository](#Basicworkflowwithgit)
 	* 1.6. [Working with branches](#Workingwithbranches)
-	* 1.7. [Collaborating with other repositories](#Collaboratingwithotherrepositories)
 * 2. [Exercises](#Exercises)
 	* 2.1. [Creating a new repository and adding content](#Creatinganewrepositoryandaddingcontent)
 	* 2.2. [Forking a repository to collaborate with it](#Forkingarepositorytocollaboratewithit)
@@ -45,7 +44,7 @@ Modern version control systems also offer tools that allow code sharing, which m
 
 The following examples do not correspond to a version management system.
 
-<image #1 and image #2>
+![NoControlVersion](https://gitlab.com/ska-telescope/src/ska-src-training-containers/-/raw/main/Talks/git-intro/media/not_version_control.png)
 
 - false sense of security: it's easy to delete important things
 - easy to make changes in the wrong directory
@@ -68,7 +67,7 @@ Git is one of many version control systems available.
 - works both locally and remotely
 
 
-###  1.1. <a name='Terminologyandoperations'></a>Terminology and operations
+###  1.1. <a name='Terminologyandoperations'></a>Terminology, operations and workflow
 
 These are the 4 basic concepts you need to know to use `git`.
 
@@ -89,6 +88,8 @@ branch - most of the time, code development is not linear: you change some thing
 **Main or Master branch**
 
 main/master branch - this is the branch you want the world to see and use. It should only include files that you are confident other people will be able to use and use them without major issues. It should contain production-ready and working code only - if you need to add and test a new feature, create a separate branch for it.
+	
+![practice example 19](./media/practice2.2.jpg) 
 
 ###  1.2. <a name='Creatingandusingaexistingrepository'></a>Creating and using a existing repository
 
@@ -101,7 +102,6 @@ So you have a new codebase or a document that you have just started working on a
 
 ```
 git init
-Initialised empty Git repository ...
 ```
 
 If you have a link to the GitHub repository, for example your coworker shared a link with you to some amazing plotting library and wants you to have a look at the source code, you can download the contents of this repository with a single command:
@@ -116,8 +116,8 @@ For example, to clone an  Git repository using `git` command and hosted on GitHu
 
 *:bulb: Go to your repository website and copy the code of the URL of it by clicking the button `Code`*
 ```
-$ git clone https://github.com/<your_user_name>/reproducibidad-csic.git
-Cloning into 'reproducibidad-csic'...
+$ git clone https://github.com/manuparra/mparra-csic-github.git
+Cloning into 'mparra-csic-github.git'...
 ...
 ```
 
@@ -144,36 +144,82 @@ Now let's check what changes we have pending, to do this use `git`:
 git status
 ```
 
-Here you will see the new file we have added.
+Here you will see the new file we have added:
 
 ```
-...
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	functions.py
+
+nothing added to commit but untracked files present (use "git add" to track)
 ```
 
-Now open the text editor again and select the `README.md` file of the repository we have cloned, and add the following text at the end of it:
+Now open the text editor again and select the `README.md` file of the repository we have cloned (or if you created a empty repository, create a new file named `README.md`), and add the following text at the end of it:
+	
+```
+# Version control with git
 
-Now we consult again from the terminal screen the status of the repository:
+This is the new repository for session 2 of training with `git` 	
+```
+
+Now we check again from the terminal screen the status of the repository with `git status`:
 
 ```
-...
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	README.md
+	functions.py
+
+nothing added to commit but untracked files present (use "git add" to track)
 ```
 
 We can see that two changes appear:
-1.- The new addition of the previous file created (`functions.py`)
-2.- A modification of `README.md`.
 
-After this we can fix the changes by adding the files or directories we want to be part of this commit. 
+1.- The new addition of the previous file created (`functions.py`) as Untracked files.
+2.- A modification of `README.md` (if you cloned the repository) or a new file `README.md` as Untracked files.
+
+After this we can fix the changes by adding the files or directories we want to be part of this commit.
 
 ```
 git add README.md
 git add functions.py
 ```
 
+Once added, if you check `git status` you will see:
+	
+```
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   README.md
+	new file:   functions.py
+	
+```
+	
+Here you can see what will be the changes to be commited:
+	
+```
+	new file:   README.md
+	new file:   functions.py
+```
+	
 And finally we create the commit of this group of files. 
+	
 This change is however not permanently added to the repository history yet! To do that, we have to explicitly *commit* the changes:
 
 ```
-git commit -m "Updated function file and README"
+git commit -m "Updated function file and README.md"
 ```
 
 :bulb: *The commit message is a short description of the changes that have been made to the repository since the last commit. In our case, we have added a single, very short file, so an equally short commit message "Added a hello.txt file" will suffice. However, if you are working on a larger project, possibly with multiple other developers and researchers, you will want to make your commit messages as informative as possible, to make sure everyone can understand the changes made to the files without the need to dig through the source code unnecessarily. Even if you are working on your own, you will forget all the details after some time. It is always a good practice to include a short title for a commit and then underneath it to write a short paragraph detailing all the changes made in this commit.*
@@ -184,6 +230,13 @@ Type the following to see the status again:
 git status
 ```
 
+It returns:
+
+```
+On branch master
+nothing to commit, working tree clean
+```
+	
 *Here you can see that we have a new status with our commited files. They are ready to be pushed to our cloud repository in GitHub.*
 
 Once this is done we can upload the changes to the GitHub repository, because if we don't do this the changes will only live on your computer and not in the cloud (the GitHub service). To do this:
@@ -214,18 +267,57 @@ In this screen you can see the `author`, `date` and `commit message`.
 
 If you hold ENTER or use the cursor to scroll down in the output text, you can scroll through the entire Git history, though it can take some time. git log may seem like a simple command, all it does at the end of the day is display your commit messages. However, it is extremely powerful and comes with a lot of options. Therefore, it is important that you familiarise yourself with the most common options or the ones that you think will be most useful in your day-to-day work.
 
+As you have seen, for projects as big as Git, the length of history can be overwhelming. We are able to limit it though. The easiest option is to limit the output to the final n commits:
+
+```	
+commit e1dcf2aa966f068bf7cd16581653e16b4c1e3ffc (HEAD -> master)
+Author: Manuel Parra <manuparra@gmail.com>
+Date:   Sun Apr 3 16:40:16 2022 +0200
+
+    Updated function file and README.md
+```
+
+That might not be enough though. For example, what if we wanted to see the commits made in the last 2 days, as we remember an important feature was added during that time, but don't remember when exactly? git log has an option for that:
+	
+```	
+git log --since="2 days ago"	
+```	
+	
+```	
+commit e1dcf2aa966f068bf7cd16581653e16b4c1e3ffc (HEAD -> master)
+Author: Manuel Parra <manuparra@gmail.com>
+Date:   Sun Apr 3 16:40:16 2022 +0200
+
+    Updated function file and README.md
+```
+	
+If you work in a collaboration where multiple people commit to the project repository, you might want to search for changes made by one person:
+
+```
+$ git log --author="Manuel Parra"
+```
+	
+And now a combination between author and time:
+
+```
+$ git log --author="Manuel Parra" --since="2 days ago"	
+```
+
+
+###  1.5. Forking, cloning and colaborating with a repository
+
+Most commonly, forks are used to either propose changes to someone else's project to which you don't have write access, or to use someone else's project as a starting point for your own idea. You can fork a repository to create a copy of the repository and make changes without affecting the upstream repository. Forks have two objectives:
+
+- Propose changes to someone else's project
+- Use someone else's project as a starting point for your own idea.	
+
+Go to this repository: https://github.com/manuparra/mparra-csic-github
+
 TBC.
-
-###  1.5. <a name='Basicworkflowwithgit'></a>Basic workflow with ´git´
-
-TBC.
-
-![practice example 19](./media/practice2.2.jpg) 
-
 
 ###  1.6. <a name='Workingwithbranches'></a>Working with branches
 
-###  1.7. <a name='Collaboratingwithotherrepositories'></a>Collaborating with other repositories
+TBC. 	
 
 ##  2. <a name='Exercises'></a>Exercises
 
