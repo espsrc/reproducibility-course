@@ -1,6 +1,4 @@
-# Introduction to tools for repository management with `git`.
-
-<HR>
+# Introduction to tools for repository management with `git`
 
 **Table of contents**
 
@@ -15,6 +13,11 @@
 	* 4.1. [How to access from a Web browser](#HowtoaccessfromaWebbrowser)
 	* 4.2. [How to access from Remote Desktop for Windows](#HowtoaccessfromRemoteDesktopforWindows)
 	* 4.3. [How to access from Remote Desktop for Linux](#HowtoaccessfromRemoteDesktopforLinux)
+* 5. [Setting your username in Git for GitHub](#SettingyourusernameinGitforGitHub)
+	* 5.1. [Setting your Git username for every repository on your computer](#SettingyourGitusernameforeveryrepositoryonyourcomputer)
+	* 5.2. [Setting your credentials](#Settingyourcredentials)
+		* 5.2.1. [Installing GitHub CLI (in your computer)](#InstallingGitHubCLIinyourcomputer)
+		* 5.2.2. [Setting up credentials](#Settingupcredentials)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -169,3 +172,87 @@ After that you will see:
 If you click on the 'Terminal' icon, you can follow the instructions for this session within the next steps.
 
 ![1 screen](./media/training2.4.png)
+
+
+##  5. <a name='SettingyourusernameinGitforGitHub'></a>Setting your username in Git for GitHub
+
+Git uses a username to associate commits with an identity. 
+
+You can change the name that is associated with your Git commits using the git config command. The new name you set will be visible in any future commits you push to GitHub from the command line. If you'd like to keep your real name private, you can use any text as your Git username.
+
+Changing the name associated with your Git commits using git config will only affect future commits and will not change the name used for past commits.
+
+###  5.1. <a name='SettingyourGitusernameforeveryrepositoryonyourcomputer'></a>Setting your Git username for every repository on your computer
+
+1. Open Terminal.
+
+2. Set a Git username:
+
+```
+git config --global user.name "Manuel Parra"
+```
+
+3. Confirm that you have set the Git username correctly:
+
+```
+git config --global user.name
+```
+
+###  5.2. <a name='Settingyourcredentials'></a>Setting your credentials
+
+####  5.2.1. <a name='InstallingGitHubCLIinyourcomputer'></a>Installing GitHub CLI (in your computer)
+
+GitHub CLI that it will automatically store your Git credentials for you when you choose HTTPS as your preferred protocol for Git operations and answer "yes" to the prompt asking if you would like to authenticate to Git with your GitHub credentials.
+
+1. Install [GitHub CLI](https://github.com/cli/cli#installation) for macOS, Windows, or Linux.
+2. In the command line, enter `gh auth login`, then follow the prompts.
+  - When prompted for your preferred protocol for Git operations, select `HTTPS`.
+  - When asked if you would like to authenticate to Git with your GitHub credentials, enter `Y`.
+
+####  5.2.2. <a name='Settingupcredentials'></a>Setting up credentials 
+
+We are going to use `gh` command to set our credentials. 
+
+Open a terminal, and type:
+
+```
+gh auth login
+```
+
+![1 screen](./media/training5.1.png)
+
+You will be asked `What account do you want to log into?`
+
+Select `> GitHub.com`
+
+![1 screen](./media/training5.2.png)
+
+Then you will be asked `What is your preferred protocol for Git operations?`
+
+Select `> HTTPS`
+
+![1 screen](./media/training5.3.png)
+
+After that, you will be asked `How would you like to authenticate GitHub CLI?`
+
+Select `> Login with a web browser`
+
+You will see a CODE like this: `First copy your one-time code: OF86-AD4A`
+
+Press `Enter`
+
+![1 screen](./media/training5.4.png)
+
+If a browser is opened, paste the CODE that you see.
+
+![1 screen](./media/training5.5.png)
+
+If not, open a browser, and open this link: https://github.com/login/device and paste the CODE.
+
+![1 screen](./media/training5.6.png)
+
+![1 screen](./media/training5.7.png)
+
+After that you will see in the terminal window that your credentials are stored.
+
+![1 screen](./media/training5.8.png)
