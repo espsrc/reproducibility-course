@@ -15,3 +15,13 @@ Material for the practical course on reproducibility of scientific analysis (pla
 :beginner: L1.4 - [Version control, working environments. Tools and good practices in the scientific field](session1/L1.4_Ciencia_Abierta_en_la_practica/OpenScience_EnLaPractica_CursoCSIC_Mar2022.pdf) :pill: **Susana Expósito**
 
 :beginner: T1.5 - [Repository management platforms and collaborative science. GitHub](session1/T1.5_github_repositories/README.md) :pill: **Manuel Parra-Royón**
+
+### :rocket: Session 1
+
+:beginner: L2.1 - Principios FAIR para recursos digitales :pill: **Julian Garrido**
+
+:beginner: T2.2 - [Introduction to tools for repository management with git](session2/T2.2_software/README.md) :pill: **Manuel Parra-Royón**
+
+:beginner: T2.3 - [Going full version control with git](session2/T2.3_git/README.md) :pill: **Javier Moldón**
+
+
