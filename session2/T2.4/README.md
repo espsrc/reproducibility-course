@@ -45,6 +45,16 @@ Keep doing work and making more and more snapshots. You can think of these as sa
 
 ![](images/git_single_branch.png)
 
+#### Stages of your repository
+
+- *modified* - you made changes to some of your files, you saved them with your editor of choice (e.g. vim), but Git is not yet aware of them. It detects that something changed, but has not yet stored it in its long-term memory (a database)
+- *staged* - you tell Git which changes should be stored in the database next (you stage these files)
+- *committed* - Git takes all the staged files you ordered it to keep track of and stores their snapshots (how they look at that point in time) into the database
+
+#### main/master branch
+This is the branch you want the world to see and use. It should only include files that you are confident other people will be able to use and use them without major issues. It should contain production-ready and working code only - if you need to add and test a new feature, create a separate branch for it.
+
+
 ## Getting started (clone)
 
 Chances are that you already have git installed on your computer. You can check by running e.g. `git --version`. If you don't have git, install it following the instructions [here](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
@@ -128,19 +138,13 @@ $ git commit -m "Include a new source m101"
 Let's repeat the cycle, but now by adding a new file. In this case we will download it from the web:
 
 ```console
-$ wget http://skyserver.sdss.org/dr14/en/tools/places/messier.csv
---2020-02-26 14:05:48--  http://skyserver.sdss.org/dr14/en/tools/places/messier.csv
-Resolving skyserver.sdss.org (skyserver.sdss.org)... 128.220.233.141
-Connecting to skyserver.sdss.org (skyserver.sdss.org)|128.220.233.141|:80... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 537 [application/octet-stream]
-Saving to: ‘messier.csv’
+$ curl -O https://raw.githubusercontent.com/7468696e6b/fourmilab-hplanet/master/Messier.csv
+--2020-02-26 14:05:48--  https://raw.githubusercontent.com/7468696e6b/fourmilab-hplanet/master/Messier.csv
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  9310  100  9310    0     0  16835      0 --:--:-- --:--:-- --:--:-- 16805
 
-messier.csv                   100%[==============================================>]     537  --.-KB/s    in 0s      
-
-2020-02-26 14:05:48 (23,9 MB/s) - ‘messier.csv’ saved [537/537]
-
-$ git add .
+$ git add Messier.csv
 $ git commit -m "Include a complete csv list of messier objects"
 [master d3c8fb5] Include a complete csv list of messier objects
  1 file changed, 7 insertions(+)
