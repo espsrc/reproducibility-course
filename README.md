@@ -16,7 +16,7 @@ Material for the practical course on reproducibility of scientific analysis (pla
 
 :beginner: T1.5 - [Repository management platforms and collaborative science. GitHub](session1/T1.5_github_repositories/README.md) :pill: **Manuel Parra-Royón**
 
-### :rocket: Session 1
+### :musical_note: Session 2
 
 :beginner: L2.1 - Principios FAIR para recursos digitales :pill: **Julian Garrido**
 
