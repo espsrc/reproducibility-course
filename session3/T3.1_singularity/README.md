@@ -69,7 +69,7 @@ For a more in-depth explanation of the differences between VMs and containers, p
 
 ## Singularity installation
 
-Follow the steps below for your operating system:
+Follow the steps below to install Singularity for your operating system:
 
 - [Linux](https://ska-telescope.gitlab.io/src/ska-src-training-containers/#h.cpchh14b5v93)
 - [MacOSX](https://ska-telescope.gitlab.io/src/ska-src-training-containers/#h.nuqiqiwd9xpa)
