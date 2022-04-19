@@ -18,7 +18,7 @@ Material for the practical course on reproducibility of scientific analysis (pla
 
 ### :musical_note: Session 2
 
-:beginner: L2.1 - Principios FAIR para recursos digitales :pill: **Julian Garrido**
+:beginner: L2.1 - [Principios FAIR para recursos digitales](https://zenodo.org/record/6417254#.Yk1WxJpBxUQ) :pill: **Julian Garrido**
 
 :beginner: T2.2 - [Introduction to tools for repository management with git](session2/T2.2_software/README.md) :pill: **Manuel Parra-Royón**
 
