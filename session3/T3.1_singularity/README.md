@@ -203,10 +203,10 @@ We could automate this a bit more by directly executing some command inside the 
 
 
 ```
-singularity exec r_base4.1.0.sif Rscript plot.R
+singularity exec r_base4.1.0.sif Rscript plot02.R
 ```
 
-In this example the file `plot.R`, generates an image file ``ouput.png`` with the plot already available.
+In this example the file `plot02.R`, generates an image file ``ouput.png`` with the plot already available.
 
 Here is the [code](./plot02.R):
 
@@ -282,7 +282,7 @@ $ sudo singularity build lolcow.sif lolcow.def
 :bulb: **NOTE:** Here you will need ``sudo`` privileges.
 
 
-Here we will review how to create a container that automatically downloads some weather data and prints a result on a graph. To do it, we create this file as `weather.R`:
+We will review how to create a container that automatically downloads some weather data and prints a result on a graph. To do it, we create this file as `weather.def` with the instructions to build the image:
 
 
 ```
@@ -300,9 +300,27 @@ From: qbicsoftware/qbic-singularity-r-base:latest
 We also need the file ``main.R`` where the R commands are:
 
 ```
-TBC.
+temperature <- read.csv(url("https://raw.githubusercontent.com/datasets/global-temp/master/data/annual.csv"))
+
+jpeg(file="temperature.jpg")
+plot(x=temperature$Year,y=temperature$Mean)
+dev.off()
+
 ```
 
+After that we can build the container:
+
+```
+sudo singularity build weather.sif weather.def
+```
+
+And then we can execute the container with:
+
+```
+singularity run weather.sif 
+```
+
+That's all !.
 
 
 ##  9. <a name='References'></a>References
