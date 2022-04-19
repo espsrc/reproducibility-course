@@ -67,6 +67,14 @@ For a more in-depth explanation of the differences between VMs and containers, p
 - Additional safety concerns, as e.g. Docker gives extra power to the user "out of the box". There is potential to do some damage to the host OS by an inexperienced or malicious user if your containerisation technology of choice is not configured or used properly.
 
 
+## Singularity installation
+
+Follow the steps below for your operating system:
+
+- [Linux](https://ska-telescope.gitlab.io/src/ska-src-training-containers/#h.cpchh14b5v93)
+- [MacOSX](https://ska-telescope.gitlab.io/src/ska-src-training-containers/#h.nuqiqiwd9xpa)
+- [Windows](https://ska-telescope.gitlab.io/src/ska-src-training-containers/#h.vfuryuhkc9ca)
+
 ##  4. <a name='WhatisSingularityandwhatadvantagesdoesithaveoverDocker.'></a>What is Singularity and what advantages does it have over Docker
 
 Singularity is a container platform (like Docker, PodMan, Moby, LXD, ... among other). It allows you to create and run containers that package up pieces of software in a way that is portable and reproducible. You can build a container using Singularity on your laptop, and then run it on many of the largest HPC clusters in the world, local university or company clusters, a single server, in the cloud, or on a workstation down the hall. Your container is a single file, and you don’t have to worry about how to install all the software you need on each different operating system.
