@@ -1,4 +1,4 @@
-Bootstrap: shub
+Bootstrap: docker
 From: r-base:4.1.0
 %post
   # Install required R packages
