@@ -6,7 +6,14 @@
 * 1. [Containers, images, ...  ?](#Containersimages...)
 * 2. [What containers are not](#Whatcontainersarenot)
 * 3. [Why do you (and don't) need containers](#Whydoyouanddontneedcontainers)
-* 4. [References](#References)
+* 4. [What is Singularity and what advantages does it have over Docker.](#WhatisSingularityandwhatadvantagesdoesithaveoverDocker.)
+* 5. [Singularity Commands](#SingularityCommands)
+* 6. [Containers Hub](#ContainersHub)
+* 7. [Interact with images](#Interactwithimages)
+	* 7.1. [Entering the images from a shell](#Enteringtheimagesfromashell)
+	* 7.2. [Executing command from a container](#Executingcommandfromacontainer)
+* 8. [Building our own container](#Buildingourowncontainer)
+* 9. [References](#References)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -60,7 +67,7 @@ For a more in-depth explanation of the differences between VMs and containers, p
 - Additional safety concerns, as e.g. Docker gives extra power to the user "out of the box". There is potential to do some damage to the host OS by an inexperienced or malicious user if your containerisation technology of choice is not configured or used properly.
 
 
-## What is Singularity and what advantages does it have over Docker.
+##  4. <a name='WhatisSingularityandwhatadvantagesdoesithaveoverDocker.'></a>What is Singularity and what advantages does it have over Docker
 
 Singularity is a container platform (like Docker, PodMan, Moby, LXD, ... among other). It allows you to create and run containers that package up pieces of software in a way that is portable and reproducible. You can build a container using Singularity on your laptop, and then run it on many of the largest HPC clusters in the world, local university or company clusters, a single server, in the cloud, or on a workstation down the hall. Your container is a single file, and you don’t have to worry about how to install all the software you need on each different operating system.
 
@@ -86,7 +93,7 @@ Singularity is focused for scientific software running in an HPC environent.
 - User Freedom
 - Support on Existing Traditional HPC
 
-## Singularity Commands
+##  5. <a name='SingularityCommands'></a>Singularity Commands
 
 To work with the Singularity there are really only a few commands that provide us with all the operations:
 
@@ -103,7 +110,7 @@ To work with the Singularity there are really only a few commands that provide u
 - ``shell`` : Shell into your image
 
 
-## Containers Hub
+##  6. <a name='ContainersHub'></a>Containers Hub
 
 Practically most of your day-to-day software and services are already containerised in public catalogues. These catalogues are called Hubs and contain thousands of ready-to-use containers. You only need to launch and run them to be able to use their functionality.
 
@@ -148,14 +155,14 @@ $ singularity run lolcow_latest.sif
 ```
 
 
-## Interact with images
+##  7. <a name='Interactwithimages'></a>Interact with images
 
 Two ways of working with singularity containers:
 
 - Entering the images from a shell
 - Executing command from a container
 
-### Entering the images from a shell
+###  7.1. <a name='Enteringtheimagesfromashell'></a>Entering the images from a shell
 
 The shell command allows you to open a new shell within your container and interact with it as though it were a small virtual machine.
 
@@ -190,7 +197,7 @@ ggplot(mydata, aes(x=date)) +
 
 :bulb: **NOTE:** Remember that outside the container R does not exist, it only lives inside the container, either with the shell command or with exec.
 
-### Executing command from a container
+###  7.2. <a name='Executingcommandfromacontainer'></a>Executing command from a container
 
 We could automate this a bit more by directly executing some command inside the contedor on some data we have in our project. For this it would be enough to execute the following and automatically the contenedor would execute the command, and then it would finish.
 
@@ -241,7 +248,7 @@ ggsave("mtcars.png")
 ```
 
 
-## Building our own container
+##  8. <a name='Buildingourowncontainer'></a>Building our own container
 
 Before you build your own container, make sure that someone else hasn't done it before. If this is not the case, then you will have or need to create your own container, to run a function, create a documentation pdf, generate a graph or run a service, among many others.
 
@@ -298,6 +305,6 @@ TBC.
 
 
 
-##  4. <a name='References'></a>References
+##  9. <a name='References'></a>References
 
 1. <a name="ref1">NIST Special Publication 800-190, Application Container Security Guide - Scientific Figure on ResearchGate</a>. Available from: https://www.researchgate.net/figure/Virtual-Machine-and-Container-Deployments_fig1_329973333 [accessed 28 Jan, 2022]
