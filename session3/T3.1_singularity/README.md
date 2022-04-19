@@ -60,6 +60,242 @@ For a more in-depth explanation of the differences between VMs and containers, p
 - Additional safety concerns, as e.g. Docker gives extra power to the user "out of the box". There is potential to do some damage to the host OS by an inexperienced or malicious user if your containerisation technology of choice is not configured or used properly.
 
 
+## What is Singularity and what advantages does it have over Docker.
+
+Singularity is a container platform (like Docker, PodMan, Moby, LXD, ... among other). It allows you to create and run containers that package up pieces of software in a way that is portable and reproducible. You can build a container using Singularity on your laptop, and then run it on many of the largest HPC clusters in the world, local university or company clusters, a single server, in the cloud, or on a workstation down the hall. Your container is a single file, and you don’t have to worry about how to install all the software you need on each different operating system.
+
+**Advantages:**
+
+- Easy to learn and use (relatively speaking)
+- Approved for HPC (installed on some of the biggest HPC systems in the world)
+- Can convert Docker containers to Singularity and run containers directly from Docker Hub
+- SingularityHub
+
+**Disadvantages:**
+
+- Less mature than Docker
+- Smaller user community
+- Under very active development
+
+Singularity is focused for scientific software running in an HPC environent.
+
+**Aims**
+
+- Mobility of Compute
+- Reproducibility
+- User Freedom
+- Support on Existing Traditional HPC
+
+## Singularity Commands
+
+To work with the Singularity there are really only a few commands that provide us with all the operations:
+
+- ``build`` : Build a container on your user endpoint or build environment
+
+- ``exec`` : Execute a command to your container
+
+- ``inspect`` : See labels, run and test scripts, and environment variables
+
+- ``pull`` : pull an image from Docker or Singularity Hub
+
+- ``run`` : Run your image as an executable
+
+- ``shell`` : Shell into your image
+
+
+## Containers Hub
+
+Practically most of your day-to-day software and services are already containerised in public catalogues. These catalogues are called Hubs and contain thousands of ready-to-use containers. You only need to launch and run them to be able to use their functionality.
+
+Here are the most important ones:
+
+- [DockerHub](https://hub.docker.com/) 
+- [SingularityHub](https://singularityhub.github.io/singularity-catalog/)
+
+Examples of ready-to-use containers include the following:
+
+- Bio:
+  - [QIIME](https://hub.docker.com/search?q=qiime)
+  - [BioGenomics](https://hub.docker.com/r/biocontainers/clustal-omega)
+  - ...
+- Astro:
+  - [CASA](https://hub.docker.com/search?q=casacore)
+  - [CARTA](https://hub.docker.com/r/carta/cartabuild/)
+  - [wsclean](https://hub.docker.com/search?q=wsclean)
+  - ...
+- Langs and computation:
+  - [R](https://hub.docker.com/_/r-base)
+  - [Python](https://hub.docker.com/search?q=python)
+  - [Fortran](https://hub.docker.com/search?q=Fortran)
+  - ...
+
+
+
+## Run a test
+
+Go to the environment where you have Singularity installed to do some tests. You can test your installation like so:
+
+```
+$ singularity pull docker://godlovedc/lolcow
+```
+
+This command will simply download an image that already exists in Docker (`docker://godlovedc/lolcow from DockerHub: lol docker`), and store it as a local file with SIF format.
+
+Then, we execute the image as an executable, simply typing:
+
+```
+$ singularity run lolcow_latest.sif
+```
+
+
+## Interact with images
+
+Two ways of working with singularity containers:
+
+- Entering the images from a shell
+- Executing command from a container
+
+### Entering the images from a shell
+
+The shell command allows you to open a new shell within your container and interact with it as though it were a small virtual machine.
+
+For this training we will download a container image from DockerHub that includes the R programming language for version 4.1.0. To find the container or the concrete version we can go to DockerHub and search for `R` and then select the tag we are looking for.
+
+
+```
+singularity pull docker://r-base:4.1.0
+```
+
+This downloads an image called ``r_base4.1.0.sif`` containing everything needed to run R. Then, we run the following command to start a shell in the container.
+
+```
+singularity shell r_base4.1.0.sif
+```
+
+We are now inside the container and can interact with it without modifying anything on our host system. 
+
+For example, we are now going to execute a small piece of code that generates an image, simply by executing the following code.
+
+```
+install.packages("ggplot2")
+library(ggplot2)
+
+mydata<-economics
+theme_set(theme_light())
+
+ggplot(mydata, aes(x=date)) +
+   geom_line(aes(y=unemploy), color = "#00AFBB") +
+   labs(y="Unemployment", x="Year")
+```
+
+:bulb: **NOTE:** Remember that outside the container R does not exist, it only lives inside the container, either with the shell command or with exec.
+
+### Executing command from a container
+
+We could automate this a bit more by directly executing some command inside the contedor on some data we have in our project. For this it would be enough to execute the following and automatically the contenedor would execute the command, and then it would finish.
+
+
+```
+singularity exec r_base4.1.0.sif Rscript plot.R
+```
+
+In this example the file `plot.R`, generates an image file ``ouput.png`` with the plot already available.
+
+Here is the `plot.R` code:
+
+```
+install.packages("ggplot2")
+library(ggplot2)
+
+mydata<-economics
+theme_set(theme_light())
+
+ggplot(mydata, aes(x=date)) +
+   geom_line(aes(y=unemploy), color = "#00AFBB") +
+   labs(y="Unemployment", x="Year")
+
+ggsave("ouput.png")
+```
+
+Now we are going to do something more complete, so we need some data in a CSV file, which is available [here](https://gist.githubusercontent.com/seankross/a412dfbd88b3db70b74b/raw/5f23f993cd87c283ce766e7ac6b329ee7cc2e1d1/mtcars.csv), and a new file with the commands to be done in R. The idea with this example is to see a workflow with containers, from the moment I have the source code of my program with the data, to its execution and results.
+
+Here is the code:
+
+```
+library(ggplot2) 
+
+carsUSA <- read.csv("cars.csv",header= TRUE)
+
+carsUSA$gear <- factor(carsUSA$gear,levels=c(3,4,5),
+                       labels=c("3","4","5")) 
+carsUSA$am <- factor(carsUSA$am,levels=c(0,1),
+                     labels=c("0","1")) 
+carsUSA$cyl <- factor(carsUSA$cyl,levels=c(4,6,8),
+                      labels=c("4","6","8")) 
+
+qplot(mpg, data=carsUSA, geom="density", fill=gear, alpha=I(.5), 
+      main="Distribution of Gas Milage", xlab="Miles Per Gallon", 
+      ylab="Density")
+
+ggsave("mtcars.png")
+```
+
+
+## Building our own container
+
+Before you build your own container, make sure that someone else hasn't done it before. If this is not the case, then you will have or need to create your own container, to run a function, create a documentation pdf, generate a graph or run a service, among many others.
+
+To build a container you need to know a bit about linux and how to install packages, as this is the basis for "how containers are made". 
+After all, building a container is nothing more than following a recipe of commands or operations that install and configure things ([+info](https://sylabs.io/guides/3.7/user-guide/definition_files.html)).
+
+Firstly here you can see an example of a definition file for the first example of container we've seen ``lolcow.def``:
+
+```
+Bootstrap: docker
+From: ubuntu:16.04
+
+%post
+    apt-get -y update
+    apt-get -y install fortune cowsay lolcat
+
+%environment
+    export LC_ALL=C
+    export PATH=/usr/games:$PATH
+
+%runscript
+    fortune | cowsay | lolcat
+```
+
+We can build it with:
+
+```
+$ sudo singularity build lolcow.sif lolcow.def
+```
+
+:bulb: **NOTE:** Here you will need ``sudo`` privileges.
+
+
+Here we will review how to create a container that automatically downloads some weather data and prints a result on a graph. To do it, we create this file as `weather.R`:
+
+
+```
+Bootstrap: shub
+From: qbicsoftware/qbic-singularity-r-base:latest
+%post
+  # Install required R packages
+  R --slave -e 'install.packages("ggplot2", repos="https://cloud.r-project.org/")'
+
+%runscript
+  #!/bin/bash
+  Rscript "main.R"
+```
+
+We also need the file ``main.R`` where the R commands are:
+
+```
+TBC.
+```
+
 
 
 ##  4. <a name='References'></a>References
