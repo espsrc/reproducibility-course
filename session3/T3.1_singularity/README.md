@@ -176,12 +176,12 @@ singularity pull docker://r-base:4.1.0
 This downloads an image called ``r_base4.1.0.sif`` containing everything needed to run R. Then, we run the following command to start a shell in the container.
 
 ```
-singularity shell r_base4.1.0.sif
+singularity shell r-base_4.1.0.sif
 ```
 
 We are now inside the container and can interact with it without modifying anything on our host system. 
 
-For example, we are now going to execute a small piece of code that generates an image, simply by executing the following code.
+For example, we are now going to execute a small piece of code that generates an image, simply by executing the following [code](./plot01.R).
 
 ```
 install.packages("ggplot2")
@@ -208,7 +208,7 @@ singularity exec r_base4.1.0.sif Rscript plot.R
 
 In this example the file `plot.R`, generates an image file ``ouput.png`` with the plot already available.
 
-Here is the `plot.R` code:
+Here is the [code](./plot02.R):
 
 ```
 install.packages("ggplot2")
@@ -226,7 +226,7 @@ ggsave("ouput.png")
 
 Now we are going to do something more complete, so we need some data in a CSV file, which is available [here](https://gist.githubusercontent.com/seankross/a412dfbd88b3db70b74b/raw/5f23f993cd87c283ce766e7ac6b329ee7cc2e1d1/mtcars.csv), and a new file with the commands to be done in R. The idea with this example is to see a workflow with containers, from the moment I have the source code of my program with the data, to its execution and results.
 
-Here is the code:
+Here is the [code](./plot03.R):
 
 ```
 library(ggplot2) 
