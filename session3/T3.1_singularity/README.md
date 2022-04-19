@@ -287,7 +287,7 @@ We will review how to create a container that automatically downloads some weath
 
 ```
 Bootstrap: shub
-From: qbicsoftware/qbic-singularity-r-base:latest
+From: r-base:4.1.0
 %post
   # Install required R packages
   R --slave -e 'install.packages("ggplot2", repos="https://cloud.r-project.org/")'
