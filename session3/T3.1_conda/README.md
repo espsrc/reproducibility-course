@@ -1,6 +1,6 @@
 # Installing miniconda
 
-We recommend using `conda` to manage the dependencies. Miniconda is a light-weight version of Anaconda. First we show how to install Miniconda if you don't have it already. More details [here](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html)
+We recommend using `conda` to manage the dependencies. Miniconda is a light-weight version of Anaconda. First we show how to install Miniconda if you don't have it already. More details [here](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html#regular-installation)
 
 You can skip this step if you already have conda available in your path.
 
@@ -37,7 +37,7 @@ conda install mamba -n base -c conda-forge
 Once we have installed conda/miniconda we are in the `base` environment. Now, we can create our environment for our first project.
 
 ```
-conda create -n repro36 python=3.6
+mamba create --name repro36 python=3.6
 conda activate repro36
 python --version
 ```
@@ -156,4 +156,4 @@ conda env remove -n r_3.5
 # Let's save our analysis in Github
 
 - Create repository
-- Add environment.yml, script.r, ouput.png
+- Add environment.yml, script.r, ouput.png, README with instruction
