@@ -22,6 +22,16 @@ rm Miniconda3-latest-MacOSX-x86_64.sh
 You can follow the instructions (download the exe file) from here: https://docs.conda.io/projects/conda/en/latest/user-guide/install/windows.html
 
 
+## Mamba!
+
+[mamba](https://github.com/mamba-org/mamba) is a very efficient dependency solver. If you don't have it, you can substitute all `mamba` commands with `conda`, and it will do the same but slower. You can install it in the base environment with:
+
+
+```
+conda install mamba -n base -c conda-forge
+
+```
+
 # Working with conda environments
 
 Once we have installed conda/miniconda we are in the `base` environment. Now, we can create our environment for our first project.
