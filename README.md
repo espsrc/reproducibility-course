@@ -25,3 +25,8 @@ Material for the practical course on reproducibility of scientific analysis (pla
 :beginner: T2.3 - [Going full version control with git](session2/T2.3_git/README.md) :pill: **Javier Moldón**
 
 
+### :package: Session 3
+
+:beginner: T3.1 - [Software containers (Singularity)](session3/T3.1_singularity/README.md) :pill: **Manuel Parra-Royón**
+
+:beginner: T3.2 - Open source package managers :pill: **Javier Moldón**
