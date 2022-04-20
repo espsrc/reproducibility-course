@@ -150,7 +150,7 @@ Examples of ready-to-use containers include the following:
 
 
 
-## Run a test
+###  Run a simple test
 
 Go to the environment where you have Singularity installed to do some tests. You can test your installation like so:
 
