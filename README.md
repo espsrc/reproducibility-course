@@ -27,6 +27,7 @@ Material for the practical course on reproducibility of scientific analysis (pla
 
 ### :package: Session 3
 
-:beginner: T3.1 - [Software containers (Singularity)](session3/T3.1_singularity/README.md) :pill: **Manuel Parra-Royón**
+:beginner: T3.1 - [Open source package managers (conda)](session3/T3.1_conda/README.md) :pill: **Javier Moldón**
 
-:beginner: T3.2 - Open source package managers :pill: **Javier Moldón**
+:beginner: T3.2 - [Software containers (Singularity)](session3/T3.2_singularity/README.md) :pill: **Manuel Parra-Royón**
+

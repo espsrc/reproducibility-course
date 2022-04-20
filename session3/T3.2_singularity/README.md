@@ -68,6 +68,7 @@ For a more in-depth explanation of the differences between VMs and containers, p
 - Additional safety concerns, as e.g. Docker gives extra power to the user "out of the box". There is potential to do some damage to the host OS by an inexperienced or malicious user if your containerisation technology of choice is not configured or used properly.
 
 
+
 ##  4. <a name='Singularityinstallation'></a>Singularity installation
 
 Follow the steps below to install Singularity for your operating system:
@@ -102,6 +103,7 @@ Singularity is focused for scientific software running in an HPC environent.
 - User Freedom
 - Support on Existing Traditional HPC
 
+
 ##  6. <a name='SingularityCommands'></a>Singularity Commands
 
 To work with the Singularity there are really only a few commands that provide us with all the operations:
@@ -117,6 +119,7 @@ To work with the Singularity there are really only a few commands that provide u
 - ``run`` : Run your image as an executable
 
 - ``shell`` : Shell into your image
+
 
 
 ##  7. <a name='ContainersHub'></a>Containers Hub
@@ -164,12 +167,14 @@ $ singularity run lolcow_latest.sif
 ```
 
 
+
 ##  8. <a name='Interactwithimages'></a>Interact with images
 
 Two ways of working with singularity containers:
 
 - Entering the images from a shell
 - Executing command from a container
+
 
 ###  8.1. <a name='Enteringtheimagesfromashell'></a>Entering the images from a shell
 
@@ -190,6 +195,7 @@ singularity shell r-base_4.1.0.sif
 
 We are now inside the container and can interact with it without modifying anything on our host system. 
 
+
 For example, we are now going to execute a small piece of code that generates an image, simply by executing the following [code](./plot01.R).
 
 ```
@@ -205,6 +211,7 @@ ggplot(mydata, aes(x=date)) +
 ```
 
 :bulb: **NOTE:** Remember that outside the container R does not exist, it only lives inside the container, either with the shell command or with exec.
+
 
 ###  8.2. <a name='Executingcommandfromacontainer'></a>Executing command from a container
 
@@ -291,11 +298,13 @@ $ sudo singularity build lolcow.sif lolcow.def
 :bulb: **NOTE:** Here you will need ``sudo`` privileges.
 
 
+
 We will review how to create a container that automatically downloads some weather data and prints a result on a graph. To do it, we create this file as `weather.def` with the instructions to build the image:
 
 
 ```
 Bootstrap: shub
+
 From: r-base:4.1.0
 %post
   # Install required R packages
@@ -309,6 +318,7 @@ From: r-base:4.1.0
 We also need the file ``main.R`` where the R commands are:
 
 ```
+
 temperature <- read.csv(url("https://raw.githubusercontent.com/datasets/global-temp/master/data/annual.csv"))
 
 jpeg(file="temperature.jpg")
