@@ -6,14 +6,15 @@
 * 1. [Containers, images, ...  ?](#Containersimages...)
 * 2. [What containers are not](#Whatcontainersarenot)
 * 3. [Why do you (and don't) need containers](#Whydoyouanddontneedcontainers)
-* 4. [What is Singularity and what advantages does it have over Docker.](#WhatisSingularityandwhatadvantagesdoesithaveoverDocker.)
-* 5. [Singularity Commands](#SingularityCommands)
-* 6. [Containers Hub](#ContainersHub)
-* 7. [Interact with images](#Interactwithimages)
-	* 7.1. [Entering the images from a shell](#Enteringtheimagesfromashell)
-	* 7.2. [Executing command from a container](#Executingcommandfromacontainer)
-* 8. [Building our own container](#Buildingourowncontainer)
-* 9. [References](#References)
+* 4. [Singularity installation](#Singularityinstallation)
+* 5. [What is Singularity and what advantages does it have over Docker](#WhatisSingularityandwhatadvantagesdoesithaveoverDocker)
+* 6. [Singularity Commands](#SingularityCommands)
+* 7. [Containers Hub](#ContainersHub)
+* 8. [Interact with images](#Interactwithimages)
+	* 8.1. [Entering the images from a shell](#Enteringtheimagesfromashell)
+	* 8.2. [Executing command from a container](#Executingcommandfromacontainer)
+* 9. [Building our own container](#Buildingourowncontainer)
+* 10. [References](#References)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -67,7 +68,16 @@ For a more in-depth explanation of the differences between VMs and containers, p
 - Additional safety concerns, as e.g. Docker gives extra power to the user "out of the box". There is potential to do some damage to the host OS by an inexperienced or malicious user if your containerisation technology of choice is not configured or used properly.
 
 
-##  4. <a name='WhatisSingularityandwhatadvantagesdoesithaveoverDocker.'></a>What is Singularity and what advantages does it have over Docker
+
+##  4. <a name='Singularityinstallation'></a>Singularity installation
+
+Follow the steps below to install Singularity for your operating system:
+
+- [Linux](https://ska-telescope.gitlab.io/src/ska-src-training-containers/#h.cpchh14b5v93)
+- [MacOSX](https://ska-telescope.gitlab.io/src/ska-src-training-containers/#h.nuqiqiwd9xpa)
+- [Windows](https://ska-telescope.gitlab.io/src/ska-src-training-containers/#h.vfuryuhkc9ca)
+
+##  5. <a name='WhatisSingularityandwhatadvantagesdoesithaveoverDocker'></a>What is Singularity and what advantages does it have over Docker
 
 Singularity is a container platform (like Docker, PodMan, Moby, LXD, ... among other). It allows you to create and run containers that package up pieces of software in a way that is portable and reproducible. You can build a container using Singularity on your laptop, and then run it on many of the largest HPC clusters in the world, local university or company clusters, a single server, in the cloud, or on a workstation down the hall. Your container is a single file, and you don’t have to worry about how to install all the software you need on each different operating system.
 
@@ -93,7 +103,8 @@ Singularity is focused for scientific software running in an HPC environent.
 - User Freedom
 - Support on Existing Traditional HPC
 
-##  5. <a name='SingularityCommands'></a>Singularity Commands
+
+##  6. <a name='SingularityCommands'></a>Singularity Commands
 
 To work with the Singularity there are really only a few commands that provide us with all the operations:
 
@@ -110,7 +121,8 @@ To work with the Singularity there are really only a few commands that provide u
 - ``shell`` : Shell into your image
 
 
-##  6. <a name='ContainersHub'></a>Containers Hub
+
+##  7. <a name='ContainersHub'></a>Containers Hub
 
 Practically most of your day-to-day software and services are already containerised in public catalogues. These catalogues are called Hubs and contain thousands of ready-to-use containers. You only need to launch and run them to be able to use their functionality.
 
@@ -155,14 +167,16 @@ $ singularity run lolcow_latest.sif
 ```
 
 
-##  7. <a name='Interactwithimages'></a>Interact with images
+
+##  8. <a name='Interactwithimages'></a>Interact with images
 
 Two ways of working with singularity containers:
 
 - Entering the images from a shell
 - Executing command from a container
 
-###  7.1. <a name='Enteringtheimagesfromashell'></a>Entering the images from a shell
+
+###  8.1. <a name='Enteringtheimagesfromashell'></a>Entering the images from a shell
 
 The shell command allows you to open a new shell within your container and interact with it as though it were a small virtual machine.
 
@@ -176,12 +190,13 @@ singularity pull docker://r-base:4.1.0
 This downloads an image called ``r_base4.1.0.sif`` containing everything needed to run R. Then, we run the following command to start a shell in the container.
 
 ```
-singularity shell r_base4.1.0.sif
+singularity shell r-base_4.1.0.sif
 ```
 
 We are now inside the container and can interact with it without modifying anything on our host system. 
 
-For example, we are now going to execute a small piece of code that generates an image, simply by executing the following code.
+
+For example, we are now going to execute a small piece of code that generates an image, simply by executing the following [code](./plot01.R).
 
 ```
 install.packages("ggplot2")
@@ -197,18 +212,19 @@ ggplot(mydata, aes(x=date)) +
 
 :bulb: **NOTE:** Remember that outside the container R does not exist, it only lives inside the container, either with the shell command or with exec.
 
-###  7.2. <a name='Executingcommandfromacontainer'></a>Executing command from a container
+
+###  8.2. <a name='Executingcommandfromacontainer'></a>Executing command from a container
 
 We could automate this a bit more by directly executing some command inside the contedor on some data we have in our project. For this it would be enough to execute the following and automatically the contenedor would execute the command, and then it would finish.
 
 
 ```
-singularity exec r_base4.1.0.sif Rscript plot.R
+singularity exec r_base4.1.0.sif Rscript plot02.R
 ```
 
-In this example the file `plot.R`, generates an image file ``ouput.png`` with the plot already available.
+In this example the file `plot02.R`, generates an image file ``ouput.png`` with the plot already available.
 
-Here is the `plot.R` code:
+Here is the [code](./plot02.R):
 
 ```
 install.packages("ggplot2")
@@ -226,7 +242,7 @@ ggsave("ouput.png")
 
 Now we are going to do something more complete, so we need some data in a CSV file, which is available [here](https://gist.githubusercontent.com/seankross/a412dfbd88b3db70b74b/raw/5f23f993cd87c283ce766e7ac6b329ee7cc2e1d1/mtcars.csv), and a new file with the commands to be done in R. The idea with this example is to see a workflow with containers, from the moment I have the source code of my program with the data, to its execution and results.
 
-Here is the code:
+Here is the [code](./plot03.R):
 
 ```
 library(ggplot2) 
@@ -248,7 +264,7 @@ ggsave("mtcars.png")
 ```
 
 
-##  8. <a name='Buildingourowncontainer'></a>Building our own container
+##  9. <a name='Buildingourowncontainer'></a>Building our own container
 
 Before you build your own container, make sure that someone else hasn't done it before. If this is not the case, then you will have or need to create your own container, to run a function, create a documentation pdf, generate a graph or run a service, among many others.
 
@@ -282,12 +298,14 @@ $ sudo singularity build lolcow.sif lolcow.def
 :bulb: **NOTE:** Here you will need ``sudo`` privileges.
 
 
-Here we will review how to create a container that automatically downloads some weather data and prints a result on a graph. To do it, we create this file as `weather.R`:
+
+We will review how to create a container that automatically downloads some weather data and prints a result on a graph. To do it, we create this file as `weather.def` with the instructions to build the image:
 
 
 ```
 Bootstrap: shub
-From: qbicsoftware/qbic-singularity-r-base:latest
+
+From: r-base:4.1.0
 %post
   # Install required R packages
   R --slave -e 'install.packages("ggplot2", repos="https://cloud.r-project.org/")'
@@ -300,11 +318,30 @@ From: qbicsoftware/qbic-singularity-r-base:latest
 We also need the file ``main.R`` where the R commands are:
 
 ```
-TBC.
+
+temperature <- read.csv(url("https://raw.githubusercontent.com/datasets/global-temp/master/data/annual.csv"))
+
+jpeg(file="temperature.jpg")
+plot(x=temperature$Year,y=temperature$Mean)
+dev.off()
+
 ```
 
+After that we can build the container:
+
+```
+sudo singularity build weather.sif weather.def
+```
+
+And then we can execute the container with:
+
+```
+singularity run weather.sif 
+```
+
+That's all !.
 
 
-##  9. <a name='References'></a>References
+##  10. <a name='References'></a>References
 
 1. <a name="ref1">NIST Special Publication 800-190, Application Container Security Guide - Scientific Figure on ResearchGate</a>. Available from: https://www.researchgate.net/figure/Virtual-Machine-and-Container-Deployments_fig1_329973333 [accessed 28 Jan, 2022]
