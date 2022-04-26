@@ -2,21 +2,38 @@
 
 
 
+<!-- vscode-markdown-toc -->
+* 1. [Snamemake](#Snamemake)
+	* 1.1. [How to install Snamemake](#HowtoinstallSnamemake)
+		* 1.1.1. [Step 1: Installing Mambaforge](#Step1:InstallingMambaforge)
+		* 1.1.2. [Step 2: Preparing a working directory](#Step2:Preparingaworkingdirectory)
+		* 1.1.3. [Step 3: Creating an environment](#Step3:Creatinganenvironment)
+		* 1.1.4. [Step 4: Activating the environment](#Step4:Activatingtheenvironment)
+	* 1.2. [Basics: An example workflow with snakemake](#Basics:Anexampleworkflowwithsnakemake)
+		* 1.2.1. [Step 1 - Composing a simple workflow](#Step1-Composingasimpleworkflow)
+	* 1.3. [Writing Workflows](#WritingWorkflows)
+	* 1.4. [A full example](#Afullexample)
+
+<!-- vscode-markdown-toc-config
+	numbering=true
+	autoSave=true
+	/vscode-markdown-toc-config -->
+<!-- /vscode-markdown-toc -->
 
 
-## Snamemake
+##  1. <a name='Snamemake'></a>Snamemake
 
 Snakemake workflow management system is a tool to create reproducible and scalable data analyses. Workflows are described via a human readable, Python based language. 
 
 They can be scaled to server, cluster, grid and cloud environments, without the need to modify the workflow definition.
 
-### How to install Snamemake
+###  1.1. <a name='HowtoinstallSnamemake'></a>How to install Snamemake
 
 The easiest way is to use the Mambaforge Python 3 distribution (Mambaforge is a Conda based distribution like Miniconda, which however uses Mamba a fast and more robust replacement for the Conda package manager). 
 
 The tutorial assumes that you are using either Linux or MacOS X.
 
-#### Step 1: Installing Mambaforge
+####  1.1.1. <a name='Step1:InstallingMambaforge'></a>Step 1: Installing Mambaforge
 
 First, please open a terminal or make sure you are logged into your Vagrant Linux VM. Assuming that you have a 64-bit system, on Linux, download and install Miniconda 3 with
 
@@ -45,7 +62,7 @@ Do you wish the installer to prepend the install location to PATH ...? [yes|no]
 
 answer with yes. 
 
-#### Step 2: Preparing a working directory
+####  1.1.2. <a name='Step2:Preparingaworkingdirectory'></a>Step 2: Preparing a working directory
 
 First, create a new directory snakemake-first-steps at a place you can easily remember and change into that directory in your terminal:
 
@@ -54,7 +71,21 @@ $ mkdir snakemake-first-steps
 $ cd snakemake-first-steps
 ```
 
-#### Step 3: Creating an environment
+ we download some example data on which the workflow shall be executed:
+
+```
+$ curl -L https://github.com/snakemake/snakemake-tutorial-data/archive/v5.24.1.tar.gz -o snakemake-tutorial-data.tar.gz
+```
+
+Next we extract the data. On Linux, run
+
+```
+$ tar --wildcards -xf snakemake-tutorial-data.tar.gz --strip 1 "*/data" "*/environment.yaml"
+```
+
+
+
+####  1.1.3. <a name='Step3:Creatinganenvironment'></a>Step 3: Creating an environment
 
 First, make sure to activate the conda base environment with
 
@@ -62,15 +93,24 @@ First, make sure to activate the conda base environment with
 $ conda activate base
 ```
 
-#### Step 4: Activating the environment
+####  1.1.4. <a name='Step4:Activatingtheenvironment'></a>Step 4: Activating the environment
 
-To activate the snakemake-first-steps environment, execute
+
+The `environment.yaml` file that you have obtained with the previous step can be used to install all required software into an isolated Conda environment with the name snakemake-tutorial via
 
 ```
-$ conda activate snakemake-first-steps
+$ mamba env create --name snakemake-tutorial --file environment.yaml
 ```
 
-### Basics: An example workflow with snakemake
+To activate the `snakemake-tutorial` environment, execute
+
+```
+$ conda activate snakemake-tutorial
+````
+
+
+
+###  1.2. <a name='Basics:Anexampleworkflowwithsnakemake'></a>Basics: An example workflow with snakemake
 
 **Features:** 
 
@@ -85,7 +125,7 @@ The Snakemake language extends the Python language, adding syntactic structures 
 - All added syntactic structures begin with a `keyword` followed by a `code block` that is either in the same line or indented and consisting of multiple lines. 
 
 
-#### Step 1 - Composing a simple workflow
+####  1.2.1. <a name='Step1-Composingasimpleworkflow'></a>Step 1 - Composing a simple workflow
 
 Snakemake rule maps reads of a given data-sample or data-source. For this example, we will use the tool `bwa`, specifically the subcommand `bwa mem`. In the working directory, create a new file called `Snakefile` with an text editor.
 
@@ -225,7 +265,7 @@ Now is time to show more deatils on this workflow with a report of this executio
 snakemake --report report.html
 ```
 
-### Writing Workflows
+###  1.3. <a name='WritingWorkflows'></a>Writing Workflows
 
 In Snakemake, workflows are specified as Snakefiles. Snakefile contains rules that denote how to create output files from input files. Dependencies between rules are handled implicitly, by matching filenames of input files against output files. Thereby wildcards can be used to write general rules.
 
@@ -264,7 +304,7 @@ config       = "config" ":" stringliteral
 skipval      = "skip_validation" ":" stringliteral
 ```
 
-## A full example
+###  1.4. <a name='Afullexample'></a>A full example
 
 Now we are going to create a complete example involving different operations, such as:
 
