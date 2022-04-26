@@ -12,16 +12,16 @@ rule sort_results:
         output:
                 "output/sorted/full-bio-indicators.csv"
         shell:
-                "cat {input} | sort > {ouput}"   
+                "cat {input} | sort > {output}"   
             
 rule merge_bio_habits:
         input:
-                "output/output-biostats.csv"
-                "output/output-habits.csv"
+                a="output/output-biostats.csv",
+                b="output/output-habits.csv"
         output:
                 "output/merged/full-bio-indicators.csv"
         shell:
-                "paste -d ' ' {input[0]} <(awk '{print $NF}' input[1])"
+                "paste -d ' ' {input.a} <(awk '{{print $NF}}' {input.b}) > {output}"
 
 rule get_biostats:
         output:
@@ -38,6 +38,4 @@ rule get_habits:
                 habits="https://raw.githubusercontent.com/manuparra/reproducibility-course/main/session4/T4.2_workflowtools/data/output-habits.csv"
         shell:
                 "wget -O {output} {params.habits}"
-
-
 
