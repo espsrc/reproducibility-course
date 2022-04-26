@@ -112,6 +112,121 @@ Since the *rule* has multiple `input` files, Snakemake will concatenate them, se
 
 The shell command invokes `bwa mem` with reference genome and reads, and pipes the output into samtools which creates a compressed BAM file containing the alignments. The output of samtools is redirected into the output file defined by the rule with `>`.
 
+To execute this example, type the following:
+
+
+```
+snakemake -n
+```
+
+> NOTE: You are executing snakemake with the option dry-run mode:
+
+It will produce the next:
+
+```
+Building DAG of jobs...
+Job stats:
+job        count    min threads    max threads
+-------  -------  -------------  -------------
+bwa_map        1              1              1
+total          1              1              1
+
+
+[Tue Apr 26 15:17:41 2022]
+rule bwa_map:
+    input: data/genome.fa, data/samples/A.fastq
+    output: mapped_reads/A.bam
+    jobid: 0
+    resources: tmpdir=/tmp
+
+Job stats:
+job        count    min threads    max threads
+-------  -------  -------------  -------------
+bwa_map        1              1              1
+total          1              1              1
+
+This was a dry-run (flag -n). The order of jobs does not reflect the order of execution.
+```
+
+Now we are going to execute the workflow without dry-run option:
+
+```
+snakemake
+```
+
+> NOTE: Snakemake needs to know what will be the amount of resources it will use for the workflow.
+
+So you will need to run the command by typing:
+
+```
+snakemake -cores 1
+```
+
+```
+snakemake -cores all
+```
+
+And this is the execution output:
+
+
+```
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job        count    min threads    max threads
+-------  -------  -------------  -------------
+bwa_map        1              1              1
+total          1              1              1
+
+Select jobs to execute...
+
+[Tue Apr 26 15:24:06 2022]
+rule bwa_map:
+    input: data/genome.fa, data/samples/A.fastq
+    output: mapped_reads/A.bam
+    jobid: 0
+    resources: tmpdir=/tmp
+
+[M::bwa_idx_load_from_disk] read 0 ALT contigs
+[M::process] read 25000 sequences (2525000 bp)...
+[M::mem_process_seqs] Processed 25000 reads in 0.919 CPU sec, 0.919 real sec
+[main] Version: 0.7.17-r1188
+[main] CMD: bwa mem data/genome.fa data/samples/A.fastq
+[main] Real time: 1.084 sec; CPU: 0.965 sec
+[Tue Apr 26 15:24:07 2022]
+Finished job 0.
+1 of 1 steps (100%) done
+Complete log: /home/ubuntu/snakemake/.snakemake/log/2022-04-26T152406.190684.snakemake.log
+```
+
+After that the output of the workflow will be in `./mapped_reads/A.bam`. To check the results you can use:
+
+```
+samtools view -h mapped_reads/A.bam | less
+```
+
+And you will see the next:
+
+```
+@SQ     SN:I    LN:230218
+@PG     ID:bwa  PN:bwa  VN:0.7.17-r1188 CL:bwa mem data/genome.fa data/samples/A.fastq
+SRR800764.1     4       *       0       0       *       *       0       0  CATCTTTGGAGTAACTATTATTTCGCCCCTTTTGTTTGCTGCATATCGCCCCGCTCTCTGCATACACGATTGGATAATGACCAAAGCAAGGTTTAATACGC   ;:8:DDDDH>F+AEHHGIGECHJGIEHDGHGIHIGIIJJDHGJJGGGEBEFFHG>H?HEFBDBCCCCBDDDDDCD>CACC@CCD@??CC??((49CA:@<B   AS:i:0  XS:i:0
+SRR800764.2     4       *       0       0       *       *       0       0       AGAATTTGACGTATATACTATCCAAAGTGGATAAATATTTGAGTTCCAATGAGGTAACTAAACTAGTTTTTTAAAACCCAGCAGAAAGAAAAAATACACTA   ?@@;DDF>FF?AABDEF9AEFHHB:CD<<CC<E<9E9EGIA<CDGDG>BD<?<FDBFHI4B>FFFG)=CHHECA;CE5;B;DE<@;@;;=;?B=9AC(:@>   AS:i:0  XS:i:0
+SRR800764.3     4       *       0       0       *       *       0       0       ATTACTCATCAAATCATGTACGAACTTCGATGGCAGTGAACCAGTTGGAGGGCCATTGCTGGTTTCAGGGCCGGAAAAAGTTGAAGGGGGGCGTCCGGTTA   @@CFFFFDHHHHHIIIJJIAIHIJJJGJGFAHIIIJJJFEAH8BF@GGEHGGGGCHJJCHIIIBEE>?CHFFDD;=B?98:>C>CDC@05<&959@9>059   AS:i:0  XS:i:0
+SRR800764.4     4       *       0       0       *       *       0       0       TATAATATTTTTTATTTTTAATTTATAATATATAATAATAAATTATAAATAAATTTTAATTAAAAGTAGTATTAACATATTATAAATAGACAAAAGAGTCT   <:+A:DADDAABH;CFEGH@BC,ABH>@HHCBBF9BFHI>CD@4CGCGGGH<4DBFG49BF??DGC3==FGGGA4CGCE4CG>DGCD>??EF>@BDB####   AS:i:0  XS:i:0
+
+```
+
+Now is time to show more deatils on this workflow with a report of this execution:
+
+```
+snakemake --report report.html
+```
+
+
+
 
 
 
