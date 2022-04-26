@@ -35,4 +35,5 @@ Material for the practical course on reproducibility of scientific analysis (pla
 
 :beginner: L4.1 - [Intro to workflow management systems](session4/T4.1_workflow/workflowmanagement.pdf) :pill: **María Ángeles Mendoza**
 )
+
 :beginner: T4.2 - [Workflow management tools: snakemake (and airflow)](session4/T4.2_workflowtools/README.md) :pill: **Manuel Parra-Royón**
