@@ -264,6 +264,99 @@ config       = "config" ":" stringliteral
 skipval      = "skip_validation" ":" stringliteral
 ```
 
+## A full example
+
+Now we are going to create a complete example involving different operations, such as:
+
+- Downloading various files from the web
+- Performing operations on the files
+- Apply a python function to plot the processed data on a graph.
+
+The workflow we want to achieve will be the following:
+
+- Retrieve the data from source A
+- Retrieve the data from source B
+- Merge the two data sources, adding to source A, source B as a new column.
+- Sort the resulting file
+- Draw a graph with the previous data.
+
+You will need this `Snakefile`:
+
+
+```
+rule create_bio_plot:
+        input:
+                "output/sorted/full-bio-indicators.csv"
+        output:
+                "bio-habits.png"
+        shell:
+                "python create-bio-plot.py {input}"
+
+rule sort_results:
+        input:
+                "output/merged/full-bio-indicators.csv"
+        output:
+                "output/sorted/full-bio-indicators.csv"
+        shell:
+                "cat {input} | sort > {output}"   
+            
+rule merge_bio_habits:
+        input:
+                a="output/output-biostats.csv",
+                b="output/output-habits.csv"
+        output:
+                "output/merged/full-bio-indicators.csv"
+        shell:
+                "paste -d ' ' {input.a} <(awk '{{print $NF}}' {input.b}) > {output}"
+
+rule get_biostats:
+        output:
+                "output/output-biostats.csv"
+        params:
+                biostats = "https://raw.githubusercontent.com/manuparra/reproducibility-course/main/session4/T4.2_workflowtools/data/output-biostats.csv"
+        shell:
+                "wget -O {output} {params.biostats}"
+
+rule get_habits:
+        output:
+                "output/output-habits.csv"
+        params:
+                habits="https://raw.githubusercontent.com/manuparra/reproducibility-course/main/session4/T4.2_workflowtools/data/output-habits.csv"
+        shell:
+                "wget -O {output} {params.habits}"
+
+```
+
+And the external files that are called from the workflow:
+
+
+```
+import matplotlib.pyplot as plt
+import csv
+  
+x = []
+y = []
+  
+with open('output/sorted/full-bio-indicators.csv','r') as csvfile:
+    plots = csv.reader(csvfile, delimiter = ';')
+      
+    for row in plots:
+        x.append(row[0])
+        y.append(int(row[2]))
+  
+plt.bar(x, y, color = 'g', width = 0.72, label = "Age")
+plt.xlabel('Names')
+plt.ylabel('Ages')
+plt.title('Ages of different persons')
+plt.legend()
+plt.savefig('bio-habits.png')
+```
+
+In order to execute this workflow type the following:
+
+```
+snakemake -c1
+```
 
 
 
