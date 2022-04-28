@@ -1,6 +1,7 @@
 # Workflow management systems and tools
 
 
+**Table of contents:**
 
 <!-- vscode-markdown-toc -->
 * 1. [Snakemake](#Snakemake)
@@ -19,6 +20,12 @@
 	autoSave=true
 	/vscode-markdown-toc-config -->
 <!-- /vscode-markdown-toc -->
+
+<HR>
+	
+**Aim of this session**
+	
+The aim of this session is to carry out a series of practical examples with which to practice the development of a workflow, through two examples: a) one related to genomics tools and b) another workflow related to an ETL process: downloading data, processing and obtaining results.
 
 
 ##  1. <a name='Snakemake'></a>Snakemake
