@@ -1,0 +1,41 @@
+rule create_bio_plot:
+        input:
+                "output/sorted/full-bio-indicators.csv"
+        output:
+                "bio-habits.png"
+        shell:
+                "python create-bio-plot.py {input}"
+
+rule sort_results:
+        input:
+                "output/merged/full-bio-indicators.csv"
+        output:
+                "output/sorted/full-bio-indicators.csv"
+        shell:
+                "cat {input} | sort > {output}"   
+            
+rule merge_bio_habits:
+        input:
+                a="output/output-biostats.csv",
+                b="output/output-habits.csv"
+        output:
+                "output/merged/full-bio-indicators.csv"
+        shell:
+                "paste -d ' ' {input.a} <(awk '{{print $NF}}' {input.b}) > {output}"
+
+rule get_biostats:
+        output:
+                "output/output-biostats.csv"
+        params:
+                biostats = "https://raw.githubusercontent.com/manuparra/reproducibility-course/main/session4/T4.2_workflowtools/data/output-biostats.csv"
+        shell:
+                "wget -O {output} {params.biostats}"
+
+rule get_habits:
+        output:
+                "output/output-habits.csv"
+        params:
+                habits="https://raw.githubusercontent.com/manuparra/reproducibility-course/main/session4/T4.2_workflowtools/data/output-habits.csv"
+        shell:
+                "wget -O {output} {params.habits}"
+

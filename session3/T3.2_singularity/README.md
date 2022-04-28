@@ -150,7 +150,7 @@ Examples of ready-to-use containers include the following:
 
 
 
-## Run a test
+###  Run a simple test
 
 Go to the environment where you have Singularity installed to do some tests. You can test your installation like so:
 
@@ -219,7 +219,7 @@ We could automate this a bit more by directly executing some command inside the 
 
 
 ```
-singularity exec r_base4.1.0.sif Rscript plot02.R
+singularity exec r-base4.1.0.sif Rscript plot02.R
 ```
 
 In this example the file `plot02.R`, generates an image file ``ouput.png`` with the plot already available.
@@ -262,6 +262,14 @@ qplot(mpg, data=carsUSA, geom="density", fill=gear, alpha=I(.5),
 
 ggsave("mtcars.png")
 ```
+
+Then try it:
+
+```
+singularity exec r-base4.1.0.sif Rscript plot03.R
+```
+
+After that you have to check a new file `mtcars.png` with the latest plot.
 
 
 ##  9. <a name='Buildingourowncontainer'></a>Building our own container
