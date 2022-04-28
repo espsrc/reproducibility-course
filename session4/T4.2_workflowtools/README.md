@@ -3,7 +3,7 @@
 
 
 <!-- vscode-markdown-toc -->
-* 1. [Snamemake](#Snamemake)
+* 1. [Snakemake](#Snakemake)
 	* 1.1. [How to install Snamemake](#HowtoinstallSnamemake)
 		* 1.1.1. [Step 1: Installing Mambaforge](#Step1:InstallingMambaforge)
 		* 1.1.2. [Step 2: Preparing a working directory](#Step2:Preparingaworkingdirectory)
@@ -21,7 +21,7 @@
 <!-- /vscode-markdown-toc -->
 
 
-##  1. <a name='Snamemake'></a>Snamemake
+##  1. <a name='Snakemake'></a>Snakemake
 
 Snakemake workflow management system is a tool to create reproducible and scalable data analyses. Workflows are described via a human readable, Python based language. 
 
