@@ -184,3 +184,12 @@ Not everything is a fairy tale in Jupyter notebooks. So when you are ready to no
 - Blog post: [Why I Don't Like Jupyter](http://opiateforthemass.es/articles/why-i-dont-like-jupyter-fka-ipython-notebook/)
 - Blog post: [Why Jupyter Is Not My Ideal Notebook](https://www.sicara.ai/blog/2019-02-25-why-jupyter-not-my-ideal-notebook)
 - Youtube: [I don't like notebooks.- Joel Grus (Allen Institute for Artificial Intelligence)](https://www.youtube.com/watch?v=7jiPeIFXb6U)
+
+
+# Examples
+
+- [Gravitational Wave detection](https://github.com/losc-tutorial/quickview/blob/master/index.ipynb)
+- [Example from a statistics and machine learning course](https://github.com/carmensg/IAA_School2019/blob/master/lectures/Day3-ZeljkoIvezic/notebooks/classification.ipynb)
+- [Python Data Science Handbook by Jake VanderPlas](https://jakevdp.github.io/PythonDataScienceHandbook/)
+- [Executable Books](https://executablebooks.org/en/latest/gallery.html)
+
