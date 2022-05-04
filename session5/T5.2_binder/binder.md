@@ -104,4 +104,4 @@ Use the "URL to open" option on the mybinder.org site to select your interface
 - [Rstudio examples](https://github.com/binder-examples/r)
 - [Blast Binder](https://github.com/fomightez/blast-binder)
 - [HCG-16](https://github.com/AMIGA-IAA/hcg-16)
-
+- [HI-FRIENDS](https://github.com/HI-FRIENDS-SDC2/hi-friends)
