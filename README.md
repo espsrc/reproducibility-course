@@ -42,3 +42,11 @@ Material for the practical course on reproducibility of scientific analysis (pla
 :beginner: T5.1 - [Jupyter Notebook: The XXI century lab book](session5/T5.1_jupyter/jupyter_notebooks.md) :pill: **Laura Darriba**
 
 :beginner: T5.2 - [Share your results with the World with Binder](session5/T5.2_binder/binder.md) :pill: **Javier Moldón**
+
+### :dancer: Session 6
+
+:beginner: T6.1 - Open Science impact and policies :pill: **Julián Garrido**
+
+:beginner: T6.2 - [Open your research results to the community](session6/T6.2_open_results/open_your_results_to_the_community.md) :pill: **Laura Darriba**
+
+
