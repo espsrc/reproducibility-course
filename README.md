@@ -45,7 +45,7 @@ Material for the practical course on reproducibility of scientific analysis (pla
 
 ### :dancer: Session 6
 
-:beginner: T6.1 - Open Science impact and policies :pill: **Julián Garrido**
+:beginner: T6.1 - [Open Science impact and policies](https://zenodo.org/record/6538879) :pill: **Julián Garrido**
 
 :beginner: T6.2 - [Open your research results to the community](session6/T6.2_open_results/Open_your_results_to_the_community.pdf) :pill: **Laura Darriba**
 
